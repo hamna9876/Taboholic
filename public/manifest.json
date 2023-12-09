@@ -1,0 +1,18 @@
+{
+    "name": "Taboholic",
+    "version": "2",
+    "description": "Chrome Extension for Tab awareness and organisation",
+    "manifest_version": 3,
+    "author": "Hamna Aamer",
+                                                                                          
+    "action": {
+        "default_popup": "./index.html",
+        "default_title": "Taboholic",
+        "default_icon": "LogoT.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["tabs"] 
+}
+
