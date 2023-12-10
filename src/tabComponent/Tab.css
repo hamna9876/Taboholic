@@ -1,0 +1,6 @@
+.Tab {
+    margin: 3%;
+    background-color: rgb(181, 134, 134);
+    display: flex;
+    justify-content: space-between;
+}

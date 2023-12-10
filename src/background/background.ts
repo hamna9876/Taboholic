@@ -14,6 +14,8 @@ chrome.runtime.onInstalled.addListener(() => {
         console.log(tabs);
 
         console.log(tabArray);
+
+        chrome.storage.local.set({ returnedTabs : tabArray})
     });
 })
 
