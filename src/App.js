@@ -2,12 +2,10 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>hello from app</h1>
+      <p>hello from app</p>
     </div>
   );
 }
-
-export default App;

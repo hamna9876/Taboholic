@@ -1,31 +1,29 @@
 
 
-//const tabArray = []; 
+let tabArray = []; 
 
 //can make smth that tracks in the console what the urls 
 //are of the tabs that open new i think that is good enough for now
 
 
 
-// chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener(() => {
 
-//     chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
-//         for(const tab of tabs)
-//         {
-//             tabArray.push(tab.url);
-//         }
-//         console.log(tabs)
-//         tabArray = [tabs];
-//         //return tabArray;
-//         //  tabArray.forEach(element => {
-//         //   console.log(tabArray[0][1].favIconUrl);
-//      localStorage.setItem('tabURLs', JSON.stringify(tabArray));
-//         // });
-//     })
+    chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
+        for(const tab of tabs)
+        {
+            tabArray.push(tab.url);
+        }
+        console.log(tabs)
+        tabArray = [tabs];
+        //return tabArray;
+        //  tabArray.forEach(element => {
+        //   console.log(tabArray[0][1].favIconUrl);
+     localStorage.setItem('tabURLs', JSON.stringify(tabArray));
+    });
+})
 
-//     //look into frameworks
-//     //Obj   HashMap
-//     //[tab][String:String] 
+
 
 // })
 
@@ -74,3 +72,8 @@ console.log("Background script is running"); // okay this works
 //maybe can do smth like chrome.tabs.onCreated.addListener(() =>
     //console.log("tab opened")
 //)  u can do that slay bby 
+
+
+//     //look into frameworks
+//     //Obj   HashMap
+//     //[tab][String:String] 

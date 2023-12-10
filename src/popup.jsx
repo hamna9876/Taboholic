@@ -1,14 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
+import ExtendedPage from './ExtendedPage/extendedPage'
 
 console.log("pop up script running");
 
 function Popup() {
   return (
     <div>
-      <h1> pop up file hello world</h1>
-      <p>simple pop up</p>
+      <h1>Taboholic</h1>
+      <a href='ExtendedPage'>click me</a>
+      <ExtendedPage />
       <App />
     </div>
   )
