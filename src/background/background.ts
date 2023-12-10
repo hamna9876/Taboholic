@@ -1,29 +1,23 @@
-
-
-let tabArray = []; 
-
 //can make smth that tracks in the console what the urls 
 //are of the tabs that open new i think that is good enough for now
-
 
 
 chrome.runtime.onInstalled.addListener(() => {
 
     chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
-        for(const tab of tabs)
-        {
-            tabArray.push(tab.url);
-        }
-        console.log(tabs)
-        tabArray = [tabs];
-        //return tabArray;
-        //  tabArray.forEach(element => {
-        //   console.log(tabArray[0][1].favIconUrl);
-     localStorage.setItem('tabURLs', JSON.stringify(tabArray));
+
+      const tabArray = tabs.map(tab => ({
+        url: tab.url,
+        favIcon: tab.favIconUrl
+      }));
+
+        console.log(tabs);
+
+        console.log(tabArray);
     });
 })
 
-
+//console.log(tabArray);
 
 // })
 
