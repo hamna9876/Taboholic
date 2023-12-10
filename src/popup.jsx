@@ -6,6 +6,9 @@ import Tab from './tabComponent/Tab';
 
 console.log("pop up script running");
 
+const favIconIdElement = document.getElementById("favIcon");
+const urlIdElement = document.getElementById("url");
+
 function Popup() {
   return (
     <div>
@@ -20,8 +23,13 @@ function Popup() {
 
 chrome.storage.local.get(["returnedTabs"], (result) => 
 {
+
   const {returnedTabs} = result;
-  console.log(returnedTabs);
+
+  // result.map((tab => {
+    
+  // }))
+  console.log(returnedTabs[0]);
 })
 
 console.log("pop up script running");

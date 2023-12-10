@@ -3,11 +3,11 @@ import './Tab.css';
 
 export default function App() {
   return (
-    <div class="Tab">
-        <div class="favIcon">
-        <label>favIcon:</label>
+    <div className="Tab">
+        <div className="favIcon" id="favIcon">
+            <label>favIcon:</label>
         </div>
-        <div class="url">
+        <div className="url" id="url">
             <label>Url:</label>
         </div>
     </div>
