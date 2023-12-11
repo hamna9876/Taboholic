@@ -2,7 +2,7 @@
 //are of the tabs that open new i think that is good enough for now
 
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.tabs.onUpdated.addListener(() => {
 
     chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
 

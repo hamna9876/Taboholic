@@ -1,14 +1,14 @@
 import React from 'react';
 import './Tab.css';
 
-export default function App() {
+export default function Tab({favIcon, url}) {
   return (
     <div className="Tab">
         <div className="favIcon" id="favIcon">
-            <label>favIcon:</label>
+            <img src={favIcon} />
         </div>
         <div className="url" id="url">
-            <label>Url:</label>
+            <label>{url} </label>
         </div>
     </div>
   );

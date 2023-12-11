@@ -1,6 +1,11 @@
 .Tab {
     margin: 3%;
-    background-color: rgb(181, 134, 134);
+    background-color: rgba(196, 192, 192, 0.256);
     display: flex;
     justify-content: space-between;
+}
+
+.favIcon > img{
+    max-width: 26px;
+    height: auto;
 }
