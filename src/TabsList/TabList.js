@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import Tab from '../tabComponent/Tab';
+import './TabList.css';
 
 export default function TabList() {
     const [returnedTabs, setTabs] = useState([]);

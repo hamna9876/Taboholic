@@ -1,8 +1,12 @@
 .Tab {
     margin: 3%;
-    background-color: rgba(196, 192, 192, 0.256);
+    background-color: rgba(235, 228, 228, 0.062);
     display: flex;
     justify-content: space-between;
+}
+
+.Tab:hover{
+    background-color: rgba(206, 178, 178, 0.26);
 }
 
 .favIcon > img{
