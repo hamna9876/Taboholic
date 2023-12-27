@@ -16,11 +16,15 @@ export default function TabList() {
 
   
     return (
-        <div className="TabList">
-            {returnedTabs.map((tab, index) => (
-                <Tab key={index} favIcon={tab.favIcon} url={tab.url} />
+        <ul  className="TabList">
+            {returnedTabs.map((tab) => (
+                <Tab 
+                    key={tab.id} 
+                    favIcon={tab.favIcon} 
+                    url={tab.url} 
+                />
             ))}
-        </div>
+        </ul>
     );
 }
 

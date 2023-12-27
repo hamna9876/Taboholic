@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: {
-        popup: path.resolve('./src/popup.jsx'),
+        popup: path.resolve('./src/popup/popup.jsx'),
         background: path.resolve('./src/background/background.ts'),
     },
     output: {

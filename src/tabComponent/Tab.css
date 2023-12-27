@@ -1,15 +1,23 @@
 .Tab {
-    margin: 3%;
+    margin: 0.3%;
     background-color: rgba(235, 228, 228, 0.062);
     display: flex;
     justify-content: space-between;
+    max-width: 30em;
 }
 
-.Tab:hover{
-    background-color: rgba(206, 178, 178, 0.26);
+.Tab:hover {
+    background-color: rgba(199, 143, 143, 0.26);
 }
 
-.favIcon > img{
-    max-width: 26px;
+.favIcon > img {
+    max-width: 1.7rem;
     height: auto;
 }
+
+.url {
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+
