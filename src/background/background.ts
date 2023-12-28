@@ -7,6 +7,8 @@ chrome.tabs.onUpdated.addListener(() => {
     chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
 
       const tabArray = tabs.map(tab => ({
+        id: tab.id,
+        title:tab.title,
         url: tab.url,
         favIcon: tab.favIconUrl
       }));

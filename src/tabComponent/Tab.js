@@ -1,7 +1,7 @@
 import React from 'react';
 import './Tab.css';
 
-export default function Tab({favIcon, url}) {
+export default function Tab({id, favIcon, url}) {
   return (
     <li className="Tab">
         <div className="favIcon" id="favIcon">

@@ -17,13 +17,9 @@ export default function TabList() {
   
     return (
         <ul  className="TabList">
-            {returnedTabs.map((tab) => (
-                <Tab 
-                    key={tab.id} 
-                    favIcon={tab.favIcon} 
-                    url={tab.url} 
-                />
-            ))}
+            {returnedTabs.map((tab) => {
+               return <Tab {...tab} key={tab.id} />
+            })}
         </ul>
     );
 }
