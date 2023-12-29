@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { render } from 'react-dom';
+import ClickButton from '../ExtendedPage/ClickButton';
 import App from '../app/App';
 import ExtendedPage from '../ExtendedPage/extendedPage';
 import TabList from '../TabsList/TabList';
@@ -10,10 +11,8 @@ function Popup() {
   return (
     <div className="PopUp">
       <h1>Taboholic</h1>
-      <a href='ExtendedPage'>click me</a>
+      <ClickButton buttonText="click me" />
       <TabList />
-      <ExtendedPage />
-      <App />
     </div>
   )
 }
