@@ -18,7 +18,6 @@ export default function TabList() {
         setTabs(previousTabs => 
         {
             console.log(id);
-            chrome.tabs.remove(id);
             return previousTabs.filter(tab => tab.id !== id);
         })
     };

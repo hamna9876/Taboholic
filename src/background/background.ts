@@ -3,7 +3,7 @@
 
 
 chrome.tabs.onActivated.addListener(() => {
-    chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
+    chrome.tabs.query({currentWindow:true}, (tabs) => {
 
       // console.log(chrome.tabs);
       const tabArray = tabs.map(tab => ({
@@ -12,19 +12,18 @@ chrome.tabs.onActivated.addListener(() => {
         url: tab.url,
         favIcon: tab.favIconUrl
       }));
-
-      //onUpdated + onCreated 
         
-        chrome.storage.local.set({ returnedTabs : tabArray})
-        console.log("tabs= " + tabs);
+        chrome.storage.local.set({ returnedTabs : tabArray});
+        for (let index = 0; index < tabArray.length; index++) {
+          console.log("tabs= " + tabArray[index].title);
+        }
+        
         console.log("savedTabs = " + tabArray);
-        
+        console.log("testing");
     });
 })
 
-//console.log(tabArray);
 
-// })
 
 //const tabURLs = JSON.parse(localStorage.getItem('tabURLs'));
 //the object is tabs, each element is of type tab,
