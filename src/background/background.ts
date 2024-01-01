@@ -2,10 +2,10 @@
 //are of the tabs that open new i think that is good enough for now
 
 
-chrome.tabs.onUpdated.addListener(() => {
-
+chrome.tabs.onActivated.addListener(() => {
     chrome.tabs.query({active:false, currentWindow:true}, (tabs) => {
 
+      // console.log(chrome.tabs);
       const tabArray = tabs.map(tab => ({
         id: tab.id,
         title:tab.title,
@@ -13,11 +13,12 @@ chrome.tabs.onUpdated.addListener(() => {
         favIcon: tab.favIconUrl
       }));
 
-        console.log(tabs);
-
-        console.log(tabArray);
-
+      //onUpdated + onCreated 
+        
         chrome.storage.local.set({ returnedTabs : tabArray})
+        console.log("tabs= " + tabs);
+        console.log("savedTabs = " + tabArray);
+        
     });
 })
 

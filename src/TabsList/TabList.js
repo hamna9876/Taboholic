@@ -12,13 +12,22 @@ export default function TabList() {
             const {returnedTabs} = result;
             setTabs(returnedTabs || []);
         })
-    }, []);
+    }, [returnedTabs]);
+
+    const deleteTab = (id) => {
+        setTabs(previousTabs => 
+        {
+            console.log(id);
+            chrome.tabs.remove(id);
+            return previousTabs.filter(tab => tab.id !== id);
+        })
+    };
 
   
     return (
         <ul  className="TabList">
             {returnedTabs.map((tab) => {
-               return <Tab {...tab} key={tab.id} />
+               return <Tab onClick={() => deleteTab(tab.id)} {...tab} key={tab.id} />
             })}
         </ul>
     );

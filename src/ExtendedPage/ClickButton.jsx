@@ -1,15 +1,12 @@
-import React from 'react';
+import React,  {useState} from 'react';
 import ExtendedPage from './extendedPage';
 
 export default function ClickButton({buttonText})
 {
-    let num =0;
-    const handleClick = () =>
-    {
-        num +=1;
-        console.log(num);
-        <ExtendedPage />
-    }
+    const [text, setText] = useState(<button>{buttonText}</button>);
 
-    return <button onClick={handleClick}>{buttonText}</button>;
+    const changeState = () => {
+        setText(<ExtendedPage />);
+    }
+    return <button onClick={changeState}>Click Me</button>;
 }
