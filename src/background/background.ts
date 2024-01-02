@@ -1,8 +1,7 @@
 //can make smth that tracks in the console what the urls 
 //are of the tabs that open new i think that is good enough for now
 
-
-chrome.tabs.onActivated.addListener(() => {
+chrome.tabs.onUpdated.addListener(() => {
     chrome.tabs.query({currentWindow:true}, (tabs) => {
 
       // console.log(chrome.tabs);
