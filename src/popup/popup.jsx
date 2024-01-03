@@ -11,12 +11,13 @@ function Popup() {
   return (
     <div className="PopUp">
       <h1>Taboholic</h1>
-      <ClickButton buttonText="click me" />
+      <ClickButton buttonText="Show more" />
       <TabList />
     </div>
   )
 }
 
 console.log("pop up script running");
+
 
 render(<Popup />, document.getElementById("react-target"));
