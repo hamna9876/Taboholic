@@ -47,6 +47,10 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+        template: './src/ExtendedPage/extendedPage.html',
+        filename: 'extendedPage.html',
+    }),
     new CopyPlugin({
         patterns: [
             { from: "public" },

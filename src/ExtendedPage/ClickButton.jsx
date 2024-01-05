@@ -10,7 +10,7 @@ export default function ClickButton({buttonText})
 
         console.log("button test");
         chrome.tabs.create({ 
-            // url: "./extendedPage.html"
+            url: "./extendedPage.html"
         })
         console.log("test");
 
