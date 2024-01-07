@@ -1,12 +1,15 @@
 import React, {} from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import ClickButton from '../ExtendedPage/ClickButton';
 import App from '../app/App';
 import TabList from '../TabsList/TabList';
 
 console.log("pop up script running");
+// const root = createRoot(document.getElementById("react-popup")); 
 
-function Popup() {
+console.log("root");
+
+export default function Popup() {
   return (
     <div className="PopUp">
       <h1>Taboholic</h1>
@@ -18,5 +21,5 @@ function Popup() {
 
 console.log("pop up script running");
 
-
-render(<Popup />, document.getElementById("react-target"));
+// root.render(<Popup />);
+// render(<Popup />, document.getElementById("react-popup"));

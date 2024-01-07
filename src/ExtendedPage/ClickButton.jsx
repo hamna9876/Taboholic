@@ -13,7 +13,7 @@ export default function ClickButton({buttonText})
             url: "./extendedPage.html"
         })
         console.log("test");
-
+        //set the variable to true
         //needs to trigger a new tab.
     }
     return <button onClick={changeState}>{buttonText}</button>;

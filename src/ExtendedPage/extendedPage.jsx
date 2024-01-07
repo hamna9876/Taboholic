@@ -1,8 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import TabList from '../TabsList/TabList';
 
-function ExtendedPage() {
+//const root = document.getElementById("react");
+//console.log(root);
+
+export default function ExtendedPage() {
   return (
     <div className="ExtendedPage">
       <p>hello from extended</p>
@@ -10,5 +13,4 @@ function ExtendedPage() {
     </div>
   )
 }
-
-render(<ExtendedPage />, document.getElementById("react"));
+//root.render(<ExtendedPage />);
