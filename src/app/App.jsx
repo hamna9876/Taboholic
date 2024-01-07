@@ -6,7 +6,7 @@ import './App.css';
 import ExtendedPage from '../ExtendedPage/extendedPage';
 import Popup from '../popup/popup';
 
-const isExtendedPage = true;
+const isExtendedPage = false;
 const rootId = isExtendedPage ? "react-extended" : "react-popup";
 const root = createRoot(document.getElementById(rootId)); 
 
