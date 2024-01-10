@@ -44,8 +44,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
+            template: './src/app/app.html',
+            filename: 'app.html',
     }),
     new HtmlWebpackPlugin({
         template: './src/ExtendedPage/extendedPage.html',

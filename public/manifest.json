@@ -6,7 +6,7 @@
     "author": "Hamna Aamer",
                                                                                           
     "action": {
-        "default_popup": "./index.html",
+        "default_popup": "./app.html",
         "default_title": "Taboholic",
         "default_icon": "LogoT.png"
     },

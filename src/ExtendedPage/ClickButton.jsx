@@ -7,11 +7,14 @@ export default function ClickButton({buttonText})
 
     const changeState = () => {
         // setText(<ExtendedPage />);
-
-        console.log("button test");
-        chrome.tabs.create({ 
-            url: "./extendedPage.html"
-        })
+        chrome.storage.local.set({ isExtendedPage : true}, ()=> {
+            console.log("button test");
+            chrome.tabs.create({ 
+                url: "./app.html"
+            })
+        });
+      //  console.log(isExtendedPage);
+     
         console.log("test");
         //set the variable to true
         //needs to trigger a new tab.
