@@ -1,18 +1,20 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import TabList from '../TabsList/TabList';
+import './extendedPage.css';
 
 //const root = document.getElementById("react");
 //console.log(root);
 
 export default function ExtendedPage() {
-  chrome.storage.local.set({isExtendedPage : true}, ()=> {
+  chrome.storage.local.set({isExtendedPage : false}, ()=> {
 
   });
 
   return (
     <div className="ExtendedPage">
       <p>hello from extended</p>
+
       <TabList />
       
     </div>

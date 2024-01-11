@@ -7,7 +7,7 @@ export default function ClickButton({buttonText})
 
     const changeState = () => {
         // setText(<ExtendedPage />);
-        chrome.storage.local.set({ isExtendedPage : true}, ()=> {
+        chrome.storage.local.set({isExtendedPage : true}, ()=> {
             console.log("button test");
             chrome.tabs.create({ 
                 url: "./app.html"

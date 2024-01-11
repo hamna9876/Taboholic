@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React,  {useEffect} from 'react';
+import React,  {useEffect, useState} from 'react';
 import { createRoot } from 'react-dom/client';
 import './App.css';
 import ExtendedPage from '../ExtendedPage/extendedPage';
@@ -17,25 +17,22 @@ const isExtendedPage = chrome.storage.local.get(["isExtendedPage"], () => {
 
 function App() {
 
+  //const [isExtendedPage, setExtendedPage] = useState(true); //initially set to false on first render and then updated throughout app
+
   useEffect(() => {
     
     chrome.storage.local.get(["isExtendedPage"], (result) => {
       const { isExtendedPage } = result;
+     // const rootId = isExtendedPage ? "react-extended" : "react-popup";
       const root = createRoot(document.getElementById(rootId));
       
-      if (!isExtendedPage) {
+      if (isExtendedPage) {
         root.render(<ExtendedPage />);
-        chrome.storage.local.set({ isExtendedPage : false}, ()=> {
-
-        });
       } else {
         root.render(<Popup />);
-        chrome.storage.local.set({ isExtendedPage : true}, ()=> {
-          
-        });
       }
     });
-  }, [isExtendedPage]);
+  }, []);
 
   return (
     

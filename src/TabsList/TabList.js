@@ -22,7 +22,7 @@ export default function TabList() {
         })
     };
 
-  
+    
     return (
         <ul  className="TabList">
             {returnedTabs.map((tab) => {
