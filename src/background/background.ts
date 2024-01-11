@@ -17,6 +17,7 @@ chrome.tabs.onCreated.addListener(() => {
         console.log("savedTabs = " + tabArray);
         console.log("testing");
     });
+
 })
 
 
@@ -63,3 +64,6 @@ console.log("Background script is running"); // okay this works
     //console.log("tab opened")
 //)
 
+// chrome.storage.local.set({ isExtendedPage : false}, ()=> {
+
+// });

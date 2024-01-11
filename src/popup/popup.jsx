@@ -10,6 +10,9 @@ console.log("pop up script running");
 console.log("root");
 
 export default function Popup() {
+  chrome.storage.local.set({ isExtendedPage : false}, ()=> {
+
+  });
   return (
     <div className="PopUp">
       <h1>Taboholic</h1>

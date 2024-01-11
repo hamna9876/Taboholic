@@ -6,10 +6,15 @@ import TabList from '../TabsList/TabList';
 //console.log(root);
 
 export default function ExtendedPage() {
+  chrome.storage.local.set({isExtendedPage : true}, ()=> {
+
+  });
+
   return (
     <div className="ExtendedPage">
       <p>hello from extended</p>
       <TabList />
+      
     </div>
   )
 }
