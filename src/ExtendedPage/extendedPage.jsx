@@ -13,7 +13,7 @@ export default function ExtendedPage() {
 
   return (
     <div className="ExtendedPage">
-      <p>hello from extended</p>
+     {/* <div class="w-52 h-10 text-black text-xl font-normal font-['Mukta']">Tabaholic<br/></div> */}
 
       <TabList />
       
