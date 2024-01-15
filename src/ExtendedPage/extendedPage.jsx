@@ -1,9 +1,9 @@
 import React from 'react';
 import TabList from '../TabsList/TabList';
 import './extendedPage.css';
-import { Box, Image, rem, Portal, Flex } from '@mantine/core';
+import { Box, Image, rem, Flex, Portal, Container, createTheme } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
-import { Container } from 'postcss';
+// import { Container } from 'postcss';
 
 
 export default function ExtendedPage() {
@@ -14,7 +14,10 @@ export default function ExtendedPage() {
   });
 
   return (
-    <div className="ExtendedPage">
+    <Container className="ExtendedPage" bg="var(--mantine-color-white)">
+    <Container size="responsive" bg="var(--mantine-color-white)" h={70}>
+    </Container>
+
       <Portal>
         <Box
           style={{
@@ -37,16 +40,18 @@ export default function ExtendedPage() {
               h={60}
               w="auto"
             />
-            <h1> Taboholic </h1>
+            <Container pl={0.2}> <h1> Taboholic </h1> </Container>
+            
 
 
           </Flex>
         </Box>
       </Portal>
+      
+      
 
       <TabList />
-
-    </div>
+    </Container>
   )
 }
 //root.render(<ExtendedPage />);
