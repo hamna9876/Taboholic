@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+
+
     devtool: 'cheap-module-source-map',
     entry: {
         popup: path.resolve('./src/popup/popup.jsx'),
@@ -55,7 +57,7 @@ module.exports = {
         patterns: [
             { from: "public" },
         ],
-    }),     
+    }), 
 ],
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

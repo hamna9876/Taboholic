@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client';
 import './App.css';
 import ExtendedPage from '../ExtendedPage/extendedPage';
 import Popup from '../popup/popup';
+import '@mantine/core/styles.css';
+import { MantineProvider } from '@mantine/core';
 
 //const isExtendedPage = false;
 const rootId = "react-root";
@@ -27,27 +29,28 @@ function App() {
       const root = createRoot(document.getElementById(rootId));
       
       if (isExtendedPage) {
-        root.render(<ExtendedPage />);
+        root.render(
+          <MantineProvider >
+            <ExtendedPage />
+          </MantineProvider >
+        );
+        
       } else {
-        root.render(<Popup />);
+        root.render(
+          <MantineProvider >
+            <Popup />
+          </MantineProvider >
+        );
       }
     });
   }, []);
 
   return (
-    
     <div className="App">
-  
       <p> hello from app </p>
-      {/* {isExtendedPage ? ( 
-        switchRoot.render(<ExtendedPage />)
-       ) : (
-        switchRoot.render(<Popup />)
-      )} */}
-
     </div>
   );
 }
 
 const root = createRoot(document.getElementById(rootId));
-root.render(<App />);
+root.render( <App />);
