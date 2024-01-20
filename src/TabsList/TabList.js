@@ -26,7 +26,7 @@ export default function TabList() {
     return (
         <ul  className="TabList">
             {returnedTabs.map((tab) => {
-               return <Tab onClick={() => deleteTab(tab.id)} {...tab} key={tab.id} />
+               return <Tab {...tab} key={tab.id} />
             })}
         </ul>
     );

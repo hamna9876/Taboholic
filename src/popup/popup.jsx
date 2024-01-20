@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import ClickButton from '../ExtendedPage/ClickButton';
 import App from '../app/App';
 import TabList from '../TabsList/TabList';
-import { CloseButton } from '@mantine/core';
+import EmissionsPerTab from '../emissions/EmissionsPerTab';
 
 console.log("pop up script running");
 // const root = createRoot(document.getElementById("react-popup")); 
@@ -18,8 +18,8 @@ export default function Popup() {
     <div className="PopUp">
       <h1>Taboholic</h1>
       <ClickButton buttonText="Show more" />
-      <CloseButton> </CloseButton>
       <TabList />
+      {/* <EmissionsPerTab url="www.google.com"/> */}
     </div>
   )
 }
