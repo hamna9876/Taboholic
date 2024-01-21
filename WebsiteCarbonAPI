@@ -1,0 +1,4 @@
+url = "https://api.websitecarbon.com/site?url=";
+tabs = chrome.storage.get(tablist)
+
+fetch 
