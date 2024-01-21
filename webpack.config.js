@@ -8,7 +8,7 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     entry: {
         popup: path.resolve('./src/popup/popup.jsx'),
-        background: path.resolve('./src/background/background.ts'),
+        background: path.resolve('./src/background/background.jsx'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

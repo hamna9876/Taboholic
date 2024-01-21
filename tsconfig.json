@@ -9,7 +9,7 @@
     "include": [
       "src/**/*.ts",
       "src/**/*.tsx"
-    ],
+, "src/background/background.jsx"    ],
     "exclude": [
       "node_modules"
     ]

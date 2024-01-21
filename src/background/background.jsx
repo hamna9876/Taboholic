@@ -1,7 +1,5 @@
 chrome.tabs.onCreated.addListener(() => {
     chrome.tabs.query({currentWindow:true}, (tabs) => {
-
-      // console.log(chrome.tabs);
       const tabArray = tabs.map(tab => ({
         id: tab.id,
         title:tab.title,
@@ -20,38 +18,27 @@ chrome.tabs.onCreated.addListener(() => {
 
 })
 
-
 //maybe create listeners for all events, created, deleted, onupdated. 
 
-//const tabURLs = JSON.parse(localStorage.getItem('tabURLs'));
-//the object is tabs, each element is of type tab,
+chrome.tabs.onRemoved.addListener((id) => {
+  console.log("removal logged in background");
+  console.log(id);
+  chrome.storage.local.get(["returnedTabs"], (result) => {
+      const {returnedTabs} = result;
+      const updatedTabs = returnedTabs.filter(tab => tab.id !== id);
+  chrome.storage.local.set({returnedTabs : updatedTabs});
+  });
+});
+//i get it, meant to udpate the list before storing back in storage.
 
+// const deleteTab = (id) => {
+//   setTabs(previousTabs => 
+//   {
+//       console.log(id);
+//       return previousTabs.filter(tab => tab.id !== id);
+//   })
+// };
 
-// chrome.action.onClicked.addListener(extensionClicked);
-
-// function extensionClicked(tab) { //call back 
-//     let msg = {
-//         text: "help"
-//     }
-//     chrome.tabs.sendMessage(tab.id, msg)
-// }
-
-
-    // chrome.tabs.query({}, (tabs) => {
-    //     for(const tab of tabs)
-    //     {
-    //         tabArray.push(tab.url);
-    //     }
-    //     console.log(tabs)
-    //     tabArray = [tabs];
-    //     //return tabArray;
-    //     //  tabArray.forEach(element => {
-    //     //   console.log(tabArray[0][1].favIconUrl);
-    //  localStorage.setItem('tabURLs', JSON.stringify(tabArray));
-        // });
-    //    console.log("yelp")
-  //  }
-//}
 
 // //https://www.youtube.com/watch?v=olLXAFJiL6Q
 
@@ -59,10 +46,6 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log("Background script is running after installed");
 })
 console.log("Background script is running"); // okay this works
-
-//maybe can do smth like chrome.tabs.onCreated.addListener(() =>
-    //console.log("tab opened")
-//)
 
 // chrome.storage.local.set({ isExtendedPage : false}, ()=> {
 
