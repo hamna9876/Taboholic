@@ -1,8 +1,8 @@
 import React from 'react';
 import './Tab.css';
-import { CloseButton } from '@mantine/core';
+import { CloseButton, Text } from '@mantine/core';
 
-export default function Tab({id, favIcon, url}) {
+export default function Tab({id, favIcon, url, title, isExtendedPage}) {
 
   const deleteTab = () => {
         console.log(id);
@@ -15,9 +15,8 @@ export default function Tab({id, favIcon, url}) {
         <div className="favIcon" id="favIcon">
             <img src={favIcon} />
         </div>
-        <div className="url" id="url">
-            <label>{url} </label>
-        </div>
+        <Text fz="md" > {title} </Text>
+        {isExtendedPage && url != null && <Text > {url} </Text>}
         <CloseButton onClick={deleteTab}></CloseButton>
     </li>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import Tab from '../tabComponent/Tab';
 import './TabList.css';
 
-export default function TabList() {
+export default function TabList({isExtenedPage}) {
     const [returnedTabs, setTabs] = useState([]);
 
     useEffect(() => 
@@ -12,22 +12,20 @@ export default function TabList() {
             const {returnedTabs} = result;
             setTabs(returnedTabs || []);
         })
-    }, [returnedTabs]);
+    }, []);
 
-    const deleteTab = (id) => {
-        setTabs(previousTabs => 
-        {
-            console.log(id);
-            return previousTabs.filter(tab => tab.id !== id);
-        })
-    };
-
-    
     return (
         <ul  className="TabList">
-            {returnedTabs.map((tab) => {
-               return <Tab {...tab} key={tab.id} />
-            })}
+            {returnedTabs.map((tab) => (
+                <Tab 
+                id={tab.id}
+                title = {tab.title} 
+                url={isExtenedPage ? tab.url : null}
+                favIcon={tab.favIcon} 
+                key={tab.id} 
+                isExtendedPage={isExtenedPage}
+                /> ))
+            }
         </ul>
     );
 }
