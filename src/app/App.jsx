@@ -20,6 +20,7 @@ const isExtendedPage = chrome.storage.local.get(["isExtendedPage"], () => {
 function App() {
 
   //const [isExtendedPage, setExtendedPage] = useState(true); //initially set to false on first render and then updated throughout app
+  //shared data: 1) tab array  2) isExtenedPage
 
   useEffect(() => {
     

@@ -29,7 +29,6 @@ export default function ExtendedPage() {
             transform: `translate3d(0, ${pinned ? 0 : rem(-110)}, 0)`,
             transition: 'transform 400ms ease',
             backgroundColor: 'var(--mantine-color-body)',
-
           }}
         >
           <Flex justify="flex-start" >
@@ -39,15 +38,10 @@ export default function ExtendedPage() {
               w="auto"
             />
             <Container pl={0.2}> <Title className='ExtensionName'>Taboholic</Title> </Container>
-            
-
-
           </Flex>
         </Box>
       </Portal>
       
-      
-
       <TabList />
     </Container>
   )
