@@ -4,6 +4,7 @@ import ClickButton from '../ExtendedPage/ClickButton';
 import App from '../app/App';
 import TabList from '../TabsList/TabList';
 import EmissionsPerTab from '../emissions/EmissionsPerTab';
+import { Title } from '@mantine/core';
 
 console.log("pop up script running");
 // const root = createRoot(document.getElementById("react-popup")); 
@@ -16,7 +17,7 @@ export default function Popup() {
   });
   return (
     <div className="PopUp">
-      <h1>Taboholic</h1>
+      <Title className='ExtensionName'>Taboholic</Title>
       <ClickButton buttonText="Show more" />
       <TabList />
       {/* <EmissionsPerTab url="www.google.com"/> */}

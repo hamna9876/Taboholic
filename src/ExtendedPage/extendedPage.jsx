@@ -1,10 +1,8 @@
 import React from 'react';
 import TabList from '../TabsList/TabList';
 import './extendedPage.css';
-import { Box, Image, rem, Flex, Portal, Container, createTheme } from '@mantine/core';
+import { Box, Image, rem, Flex, Portal, Container, Title } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
-// import { Container } from 'postcss';
-
 
 export default function ExtendedPage() {
   const pinned = useHeadroom({ fixedAt: 10 });
@@ -40,7 +38,7 @@ export default function ExtendedPage() {
               h={60}
               w="auto"
             />
-            <Container pl={0.2}> <h1> Taboholic </h1> </Container>
+            <Container pl={0.2}> <Title className='ExtensionName'>Taboholic</Title> </Container>
             
 
 
