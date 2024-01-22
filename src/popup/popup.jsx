@@ -1,6 +1,7 @@
 import React, {} from 'react';
 import { createRoot } from 'react-dom/client';
 import ClickButton from '../ExtendedPage/ClickButton';
+import App from '../app/App';
 import TabList from '../TabsList/TabList';
 import EmissionsPerTab from '../emissions/EmissionsPerTab';
 
@@ -15,9 +16,9 @@ export default function Popup() {
   });
   return (
     <div className="PopUp">
-      <h1 className='ExtensionName'>Taboholic</h1>
+      <h1>Taboholic</h1>
       <ClickButton buttonText="Show more" />
-      <TabList isExtendedPage={false}/>
+      <TabList />
       {/* <EmissionsPerTab url="www.google.com"/> */}
     </div>
   )

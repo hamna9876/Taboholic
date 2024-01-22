@@ -40,7 +40,7 @@ export default function ExtendedPage() {
               h={60}
               w="auto"
             />
-            <Container pl={0.2}> <h1 className='ExtensionName'> Taboholic </h1> </Container>
+            <Container pl={0.2}> <h1> Taboholic </h1> </Container>
             
 
 
@@ -50,7 +50,7 @@ export default function ExtendedPage() {
       
       
 
-      <TabList isExtenedPage={true}/>
+      <TabList />
     </Container>
   )
 }
