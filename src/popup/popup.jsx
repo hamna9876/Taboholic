@@ -4,7 +4,7 @@ import ClickButton from '../ExtendedPage/ClickButton';
 import App from '../app/App';
 import TabList from '../TabsList/TabList';
 import EmissionsPerTab from '../emissions/EmissionsPerTab';
-import { Title } from '@mantine/core';
+import { ScrollArea, Title } from '@mantine/core';
 import './popup.css';
 
 console.log("pop up script running");
@@ -16,10 +16,12 @@ export default function Popup() {
   });
   return (
     <div className="PopUp">
-      <Title className='ExtensionName'>Taboholic</Title>
+    <ScrollArea h={350} w={520} type="auto" scrollHideDelay={1500}>
+    <Title className='ExtensionName'>Taboholic</Title>
       <ClickButton buttonText="Show more" />
       <TabList />
       {/* <EmissionsPerTab url="www.google.com"/> */}
+    </ScrollArea>
     </div>
   )
 }

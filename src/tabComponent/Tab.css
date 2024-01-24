@@ -13,11 +13,12 @@
 
 label{
     cursor: pointer;
+    text-align: left;
 }
 
 .favIcon > img {
     max-width: 1.7rem;
-    height: auto;
+    max-height: 1.7rem;
 }
 
 .url {
