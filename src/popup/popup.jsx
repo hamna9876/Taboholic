@@ -5,11 +5,10 @@ import App from '../app/App';
 import TabList from '../TabsList/TabList';
 import EmissionsPerTab from '../emissions/EmissionsPerTab';
 import { Title } from '@mantine/core';
+import './popup.css';
 
 console.log("pop up script running");
 // const root = createRoot(document.getElementById("react-popup")); 
-
-console.log("root");
 
 export default function Popup() {
   chrome.storage.local.set({ isExtendedPage : false}, ()=> {

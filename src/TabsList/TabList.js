@@ -14,14 +14,6 @@ export default function TabList() {
         })
     }, [returnedTabs]);
 
-    const deleteTab = (id) => {
-        setTabs(previousTabs => 
-        {
-            console.log(id);
-            return previousTabs.filter(tab => tab.id !== id);
-        })
-    };
-
     
     return (
         <ul  className="TabList">

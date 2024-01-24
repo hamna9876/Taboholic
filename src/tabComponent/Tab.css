@@ -8,6 +8,11 @@
 
 .Tab:hover {
     background-color: rgba(199, 143, 143, 0.26);
+    cursor: pointer;
+}
+
+label{
+    cursor: pointer;
 }
 
 .favIcon > img {
