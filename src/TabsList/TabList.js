@@ -16,7 +16,7 @@ export default function TabList() {
 
     
     return (
-        <ul  className="TabList">
+        <ul className="TabList">
             {returnedTabs.map((tab) => {
                return <Tab {...tab} key={tab.id} />
             })}

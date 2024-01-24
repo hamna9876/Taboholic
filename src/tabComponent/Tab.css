@@ -2,7 +2,7 @@
     margin: 0.3%;
     background-color: rgba(235, 228, 228, 0.062);
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     max-width: 30em;
 }
 
