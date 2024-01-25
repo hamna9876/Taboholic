@@ -2,18 +2,25 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 export default function EmissionsPerTab({url}) {
-    const [EmissionPerTab, setEmissionPerTab] = useState(null);
+    const [emissionPerTab, setEmissionPerTab] = useState(null);
 
-    useEffect(async() => {
-        const reqestURL = 'https://api.websitecarbon.com/site?url=' + url;
-        const response = await fetch(reqestURL);
-        const data = await response.json();
-        setEmissionPerTab(data.rating);
+    useEffect(() => {
+        const reqestURL = `https://api.websitecarbon.com/site?url=${encodeURIComponent(url)}`;
+        const request = async() => {
+            const response = await fetch(reqestURL);
+            console.log(response);
+            const data = await response.json();
+            setEmissionPerTab(data.url);
+        }
+         //https://api.websitecarbon.com/site?url=
+
+         request();
+        
     }, []);
 
     return (
         <div className="EmissionsPerTab">
-            <p> emission rating: {EmissionPerTab} </p>
+            <p> is website: '{url}' green?? : {emissionPerTab} </p>
         </div>
     );
 }
