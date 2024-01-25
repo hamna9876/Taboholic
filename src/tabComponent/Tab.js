@@ -3,6 +3,8 @@ import './Tab.css';
 import { CloseButton, Space } from '@mantine/core';
 
 export default function Tab({id, favIcon, url}) {
+  
+  const hasFavIcon = favIcon === undefined || favIcon.length <= 0;
   const deleteTab = () => {
         console.log(id);
         chrome.tabs.remove(id);
@@ -20,12 +22,12 @@ export default function Tab({id, favIcon, url}) {
         <div className="favIcon" id="favIcon">
             <img src={favIcon} />
         </div>
-        
-        {favIcon === undefined || null ? <Space w="xl"/> : <Space w="xs"/>}
+        { hasFavIcon ? <Space w="xl"/> : <Space w="xs"/>}
         <div className="url" id="url">
             <label> {url} </label>
         </div>
         <CloseButton onClick={deleteTab}></CloseButton>
     </li>
   );
+  //doesnt show mantines ones, could be string trimmed after .svg
 }

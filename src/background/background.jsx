@@ -9,7 +9,11 @@ chrome.tabs.onCreated.addListener(() => {
         
         chrome.storage.local.set({ returnedTabs : tabArray});
         for (let index = 0; index < tabArray.length; index++) {
-          console.log("tabs= " + tabArray[index].title);
+            console.log("tabs= " + tabArray[index].favIcon + tabArray[index].title);
+
+            if(typeof tabArray[index].favIcon === "string" ){
+                console.log(tabArray[index].favIcon.length);
+            }
         }
         
         console.log("savedTabs = " + tabArray);
@@ -25,7 +29,7 @@ chrome.tabs.onRemoved.addListener((id) => {
   console.log(id);
   chrome.storage.local.get(["returnedTabs"], (result) => {
       const {returnedTabs} = result;
-      const updatedTabs = returnedTabs.filter(tab => tab.id !== id);
+      const updatedTabs = returnedTabs.filter(tab => tab.id !== id);  
   chrome.storage.local.set({returnedTabs : updatedTabs});
   });
 });
