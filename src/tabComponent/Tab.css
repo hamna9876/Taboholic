@@ -1,29 +1,31 @@
 .Tab {
-    margin: 0.3%;
-    background-color: rgba(235, 228, 228, 0.062);
-    display: flex;
-    /* justify-content: space-between; */
-    max-width: 30em;
+  margin: 0.3%;
+  background-color: rgba(235, 228, 228, 0.363);
+  display: flex;
+  max-width: 30em;
 }
 
 .Tab:hover {
-    background-color: rgba(199, 143, 143, 0.26);
-    cursor: pointer;
+  background-color: rgba(199, 143, 143, 0.26);
+  cursor: pointer;
 }
 
-label{
-    cursor: pointer;
-    text-align: left;
+label {
+  cursor: pointer;
+  text-align: left;
+  word-wrap: break-word;
 }
 
 .favIcon > img {
-    max-width: 1.7rem;
-    max-height: 1.7rem;
+  max-width: 1.7rem;
+  max-height: 1.7rem;
 }
 
 .url {
-    max-width: 80%;
-    word-wrap: break-word;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
-
+.closeButton {
+  justify-content: space-between;
+}

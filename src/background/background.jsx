@@ -55,19 +55,18 @@ console.log("Background script is running"); // okay this works
 
 // });
 
-const proxy = "https://api.allorigins.win/get?url=";
-const url = "https://www.google.com/";
-const reqestURL = `https://api.websitecarbon.com/site?url=
-${encodeURIComponent(url)}`; //`https://api.websitecarbon.com/site?url=${encodeURIComponent(url)}`;
+// const url = "https://www.google.com/";
+// const reqestURL = `https://api.websitecarbon.com/site?url=
+// ${encodeURIComponent(url)}`; //`https://api.websitecarbon.com/site?url=${encodeURIComponent(url)}`;
 
-// fetch(getCookie);
+// // fetch(getCookie);
 
-const request = async () => {
-  const response = await fetch(reqestURL);
-  console.log(response);
-  const data = await response.json();
-  console.log(data);
-};
-//https://api.websitecarbon.com/site?url=
+// const request = async () => {
+//   const response = await fetch(reqestURL);
+//   console.log(response);
+//   const data = await response.json();
+//   console.log(data);
+// };
+// //https://api.websitecarbon.com/site?url=
 
-request();
+// request();
