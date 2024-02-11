@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import ClickButton from "../ExtendedPage/ClickButton";
+import ClickButton from "../ExtendedView/ClickButton";
 import App from "../app/App";
 import TabList from "../TabsList/TabList";
 import EmissionsPerTab from "../emissions/EmissionsPerTab";
@@ -11,7 +11,6 @@ console.log("pop up script running");
 // const root = createRoot(document.getElementById("react-popup"));
 
 export default function Popup() {
-  chrome.storage.local.set({ isExtendedPage: false }, () => {});
   return (
     <div className="PopUp">
       <ScrollArea h={350} w={520} type="auto" scrollHideDelay={1500}>
