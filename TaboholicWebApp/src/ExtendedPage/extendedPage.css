@@ -1,0 +1,13 @@
+.ExtendedPage {
+    background-color: grey;
+    
+}
+
+.ExtendedPage > .TabList{
+    background-color: white;
+    padding-left: 10%;
+}
+
+.ExtendedPage > .TabList > .Tab{
+    min-width: fit-content;
+}

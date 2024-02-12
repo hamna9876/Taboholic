@@ -21,7 +21,6 @@ export default function Popup() {
           <ClickButton buttonText="Show more" />
         </Group>
         <TabList />
-        <EmissionsPerTab url="www.google.com" />
       </ScrollArea>
     </div>
   );

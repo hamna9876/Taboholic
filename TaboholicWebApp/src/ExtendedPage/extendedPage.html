@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taboholic</title>
+</head>
+<body>
+  <!-- Root element for React rendering -->
+  <div id="extended-root"></div>
+
+  <!-- Include React library -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+  <!-- Include Babel for JSX transpilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Include your React components -->
+  <script type="text/babel">
+    import TabList from './TabsList/TabList';
+    // Define your React components here (e.g., ExtendedPage, TabList, etc.)
+    function ExtendedPage() {
+    
+      return (
+        <div>
+          <h1>Extended Page</h1>
+          {<TabList />}
+        </div>
+      );
+    }
+
+    // Render the ExtendedPage component into the extended-root element
+    ReactDOM.render(<ExtendedPage />, document.getElementById('extended-root'));
+  </script>
+</body>
+</html>
