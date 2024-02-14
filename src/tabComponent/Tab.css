@@ -1,5 +1,5 @@
 .Tab {
-  max-width: 80em;
+  max-width: 36em;
   margin: -5px;
 }
 
@@ -10,12 +10,6 @@
 
 .Tab:hover {
   background-color: rgba(199, 143, 143, 0.26);
-}
-
-label {
-  cursor: pointer;
-  text-align: left;
-  word-wrap: break-word;
 }
 
 .url {
