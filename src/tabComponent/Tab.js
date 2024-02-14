@@ -1,10 +1,10 @@
 import React from "react";
 import "./Tab.css";
-import { Button, CloseButton, Flex, Space } from "@mantine/core";
+import { Button, CloseButton, Text, Space } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 
 export default function Tab({ id, favIcon, title }) {
-  const hasFavIcon = favIcon === undefined || favIcon.length <= 0;
+  const hasFavIcon = !favIcon === undefined || favIcon.length > 0;
   const { hovered, ref } = useHover();
 
   const deleteTab = () => {
@@ -26,9 +26,13 @@ export default function Tab({ id, favIcon, title }) {
       justify="space-between"
       fullWidth
       leftSection={
-        <div className="favIcon">
-          <img src={favIcon} />
-        </div>
+        hasFavIcon ? (
+          <div className="favIcon">
+            <img src={favIcon} />
+          </div>
+        ) : (
+          <Space w="xl" />
+        )
       }
       // {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
 
@@ -42,9 +46,9 @@ export default function Tab({ id, favIcon, title }) {
       variant="default"
       mt="md"
     >
-      <div className="title" id="title">
+      <Text className="title" truncate="end">
         <label> {title} </label>
-      </div>
+      </Text>
     </Button>
     // </div>
   );
