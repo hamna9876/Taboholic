@@ -1,12 +1,12 @@
 import React from "react";
 import "./Tab.css";
 import { Button, CloseButton, Flex, Space } from "@mantine/core";
-import EmissionsPerTab from "../emissions/EmissionsPerTab";
 import { useHover } from "@mantine/hooks";
 
-export default function Tab({ id, favIcon, url }) {
+export default function Tab({ id, favIcon, title }) {
   const hasFavIcon = favIcon === undefined || favIcon.length <= 0;
   const { hovered, ref } = useHover();
+
   const deleteTab = () => {
     console.log(id);
     chrome.tabs.remove(id);
@@ -19,25 +19,34 @@ export default function Tab({ id, favIcon, url }) {
   };
 
   return (
-    <li className="Tab" onClick={openTab}>
-      <div className="favIcon" id="favIcon">
-        <img src={favIcon} />
-      </div>
-      {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
-      <div className="url" id="url">
-        <label> {url} </label>
-      </div>
-      
+    // <div className="Tab">
+    <Button
+      className="Tab"
+      onClick={openTab}
+      justify="space-between"
+      fullWidth
+      leftSection={
+        <div className="favIcon">
+          <img src={favIcon} />
+        </div>
+      }
+      // {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
+
+      rightSection={
         <CloseButton
-         onClick={deleteTab}
-         size="sm"
-         variant="transparent"
-         aria-label="Close tab"
-         style={{ marginLeft: 'auto' }}
+          onClick={deleteTab}
+          size="sm"
+          aria-label="Close tab"
         ></CloseButton>
-        <EmissionsPerTab url={url} />
-    </li>
-    
+      }
+      variant="default"
+      mt="md"
+    >
+      <div className="title" id="title">
+        <label> {title} </label>
+      </div>
+    </Button>
+    // </div>
   );
   //doesnt show mantines ones, could be string trimmed after .svg
 }
