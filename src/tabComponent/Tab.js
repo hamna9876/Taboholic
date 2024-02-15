@@ -4,7 +4,7 @@ import { Button, CloseButton, Text, Space } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 
 export default function Tab({ id, favIcon, title }) {
-  const hasFavIcon = !favIcon === undefined || favIcon.length > 0;
+  //const hasFavIcon = !favIcon === undefined || favIcon.length > 0;
   const { hovered, ref } = useHover();
 
   const deleteTab = () => {
@@ -26,13 +26,9 @@ export default function Tab({ id, favIcon, title }) {
       justify="space-between"
       fullWidth
       leftSection={
-        hasFavIcon ? (
           <div className="favIcon">
             <img src={favIcon} />
           </div>
-        ) : (
-          <Space w="xl" />
-        )
       }
       // {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
 

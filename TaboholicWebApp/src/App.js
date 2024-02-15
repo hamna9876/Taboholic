@@ -1,8 +1,9 @@
 import "./App.css";
 import ClickButton from "./Button/clickButton";
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, Space } from "@mantine/core";
 import ExtendedPage from "./ExtendedPage/extendedPage";
+import TabDemo from "./tabDemo";
 
 function App() {
   return (
@@ -10,11 +11,15 @@ function App() {
       <div className="App">
         <header className="App-header">
           <p> test </p>
+          <p></p>
         </header>
-        
+
         <ExtendedPage />
         <ClickButton />
       </div>
+      
+      <p> </p>
+      <TabDemo />
     </MantineProvider>
   );
 }
