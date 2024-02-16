@@ -16,7 +16,7 @@
   "permissions": ["tabs", "storage"],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["http://localhost:3000/"],
       "css": ["test.css"]
     }
   ]
