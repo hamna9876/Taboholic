@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     popup: path.resolve("./src/popup/popup.jsx"),
     background: path.resolve("./src/background/background.jsx"),
+    content: path.resolve("./src/ExtendedView/contentScriptTabInfo.jsx"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),

@@ -24,7 +24,7 @@ function getTabArray() {
 
 chrome.windows.getCurrent({ populate: true }, (currentWindow) => {
   getTabArray();
-})
+});
 
 chrome.tabs.onCreated.addListener(getTabArray);
 
@@ -77,5 +77,15 @@ chrome.storage.local.get(["returnedTabs"], (result) => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.tabData) {
     console.log("Received message from button:", message.tabData);
+  }
+});
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log("recieved? ", sender);
+  if (request.action === "getData") {
+    chrome.storage.local.get("returnedTabs", function (data) {
+      sendResponse({ data: data.returnedTabs });
+    });
+    return true;
   }
 });

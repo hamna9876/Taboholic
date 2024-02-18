@@ -2,15 +2,20 @@ import React from "react";
 import "./extendedPage.css";
 import { Box, Image, rem, Flex, Portal, Container, Title } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
+import TabList from "../TabList/TabList";
 
 export default function ExtendedPage() {
   const pinned = useHeadroom({ fixedAt: 10 });
   return (
-    <Container className="ExtendedPage" bg="var(--mantine-color-white)">
+    <Container
+      id="extendedPage"
+      className="ExtendedPage"
+      bg="var(--mantine-color-white)"
+    >
       <Container
         size="responsive"
         bg="var(--mantine-color-white)"
-        h={70}
+        h={30}
       ></Container>
 
       <Portal>
@@ -38,7 +43,7 @@ export default function ExtendedPage() {
         </Box>
       </Portal>
 
-      {/* <TabList /> */}
+      <TabList returnedTabs={null} id="tabs" />
     </Container>
   );
 }

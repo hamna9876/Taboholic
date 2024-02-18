@@ -6,15 +6,11 @@ export default function ClickButton({ buttonText }) {
   const [text, setText] = useState(buttonText);
 
   const changeState = () => {
-    chrome.storage.local.set({ isExtendedPage: true }, () => {
-      console.log("button test");
-      chrome.tabs.create({
-        url: "http://localhost:3000/",
-      });
+    console.log("button test");
+    chrome.tabs.create({
+      url: "http://localhost:3000/",
     });
-    //  console.log(isExtendedPage);
-
-    console.log("test");
+    //console.log(isExtendedPage);
     //set the variable to true
     //needs to trigger a new tab.
   };
@@ -22,6 +18,7 @@ export default function ClickButton({ buttonText }) {
     <>
       {/* <button onClick={changeState}>{buttonText}</button> */}
       <ActionIcon
+        id="buttonIdTriffer"
         component="a"
         size="lg"
         aria-label="Open in a new tab"

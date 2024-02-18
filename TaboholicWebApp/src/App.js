@@ -10,14 +10,14 @@ function App() {
     <MantineProvider>
       <div className="App">
         <header className="App-header">
-          <p> test </p>
+          <p> </p>
           <p></p>
         </header>
 
         <ExtendedPage />
         <ClickButton />
       </div>
-      
+
       <p> </p>
       <TabDemo />
     </MantineProvider>
