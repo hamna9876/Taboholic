@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tab from "../tab/Tab";
 import "./TabList.css";
 import { List, Button } from "@mantine/core";
+import EmissionsList from "../emissions/EmissionsList";
 
 export default function TabList() {
   const [buttonData, setButtonData] = useState("");
@@ -48,6 +49,7 @@ export default function TabList() {
           return <Tab {...tab} key={tab.id} />;
         })}
       </List>
+      <EmissionsList />
     </>
   );
 }

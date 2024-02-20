@@ -15,11 +15,11 @@ function App() {
         </header>
 
         <ExtendedPage />
-        <ClickButton />
+        {/* <ClickButton /> */}
       </div>
 
       <p> </p>
-      <TabDemo />
+      {/* <TabDemo /> */}
     </MantineProvider>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Tab.css";
-import { Button, CloseButton, Text, Space } from "@mantine/core";
+import { Button, CloseButton, Text, Avatar } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 
 export default function Tab({ id, favIcon, title }) {
@@ -25,11 +25,7 @@ export default function Tab({ id, favIcon, title }) {
       onClick={openTab}
       justify="space-between"
       fullWidth
-      leftSection={
-          <div className="favIcon">
-            <img src={favIcon} />
-          </div>
-      }
+      leftSection={<Avatar src={favIcon} radius="sm" size="sm"/>}
       // {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
 
       rightSection={

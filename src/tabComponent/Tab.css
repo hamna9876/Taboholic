@@ -3,11 +3,6 @@
   margin: -5px;
 }
 
-.favIcon > img {
-  max-width: 1.7rem;
-  max-height: 1.7rem;
-}
-
 .Tab:hover {
   background-color: rgba(199, 143, 143, 0.26);
 }

@@ -1,29 +1,20 @@
 import React from "react";
 import "./Tab.css";
-import { Button, CloseButton, Text } from "@mantine/core";
+import { List, CloseButton, Text, Avatar } from "@mantine/core";
 
-export default function Tab({ id, favIcon, title }) {
+export default function Tab({ id, favIcon, title, url }) {
   return (
-    <Button
-      className="Tab"
-      justify="space-between"
-      fullWidth
-      leftSection={
-        <div className="favIcon">
-          <img src={favIcon} />
-        </div>
-      }
-      // {hasFavIcon ? <Space w="xl" /> : <Space w="xs" />}
-
-      rightSection={
-        <CloseButton size="sm" aria-label="Close tab"></CloseButton>
-      }
-      variant="default"
-      mt="md"
-    >
-      <Text className="title" truncate="end">
-        <label> {title} </label>
-      </Text>
-    </Button>
+    <List.Item className="Tab">
+      <Avatar src={favIcon} alt="Favicon" radius="sm" size="sm" />
+      <div className="TabText">
+        <Text className="tabTitle" size="md" weight={500} truncate>
+          {title}
+        </Text>
+        <Text className="url" size="sm" color="dimmed" truncate>
+          {url}
+        </Text>
+      </div>
+      {/* <CloseButton className="CloseButton" size="sm" variant="filled" /> */}
+    </List.Item>
   );
 }

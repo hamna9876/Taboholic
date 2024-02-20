@@ -1,11 +1,18 @@
 .Tab {
-  max-width: 36em;
-  margin: -5px;
+  min-width: 30em;
+  margin-left: -10%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: rgb(245, 245, 245);
 }
 
-.favIcon > img {
+.Avatar {
   max-width: 1.7rem;
   max-height: 1.7rem;
+  margin-right: 10px;
 }
 
 .Tab:hover {
@@ -13,6 +20,23 @@
 }
 
 .url {
-  max-width: 80%;
-  word-wrap: break-word;
+  max-width: 30em;
+  margin-top: 4px;
+}
+
+.TabText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2.5rem;
+  margin-top: -2rem;
+}
+
+.tabTitle {
+  max-width: 30em;
+}
+
+.CloseButton {
+  padding: 0;
+  background-color: cadetblue;
 }
