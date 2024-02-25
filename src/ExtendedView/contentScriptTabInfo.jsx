@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 console.log("content script loaded");
 
 function displayAList() {
@@ -53,40 +52,41 @@ chrome.runtime.sendMessage({ action: "getData" }, async function (response) {
 
     const fetchedData = [];
 
-    const fetchDataForUrl = async (url) => {
-      try {
-        const encodedUrl = encodeURIComponent(url);
-        const requestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
-        const response = await fetch(requestURL);
-
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-
-        const data = await response.json();
-        console.log(data);
-        return data;
-      } catch (error) {
-        console.error("There was a problem with the fetch operation:", error);
-        return null;
-      }
-    };
-
     for (const tab of tabData) {
       const data = await fetchDataForUrl(tab.url);
       fetchedData.push(data);
-
-      const emissionsEvent = new CustomEvent("EmissionsEvent", {
-        detail: fetchedData,
-      });
-      document.dispatchEvent(emissionsEvent);
     }
+    const emissionsEvent = new CustomEvent("EmissionsEvent", {
+      detail: fetchedData,
+    });
+    document.dispatchEvent(emissionsEvent);
 
     console.log(fetchedData);
+    console.log(emissionsEvent);
 
     const event = new CustomEvent("TabDataEvent", { detail: tabData });
     document.dispatchEvent(event);
+    console.log(event);
   } catch (error) {
     console.error("Error handling response:", error);
   }
 });
+
+const fetchDataForUrl = async (url) => {
+  try {
+    const encodedUrl = encodeURIComponent(url);
+    const requestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
+    const response = await fetch(requestURL);
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error("There was a problem with the fetch operation:", error);
+    return null;
+  }
+};

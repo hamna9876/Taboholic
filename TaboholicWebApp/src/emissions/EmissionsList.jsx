@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import EmissionsPerTab from "./EmissionsPerTab";
+import { List } from "@mantine/core";
 
 export default function EmissionsList() {
   const [emissions, setEmissions] = useState([]);
@@ -16,14 +18,19 @@ export default function EmissionsList() {
     );
 
     return () => {
-      document.removeEventListener(
-        "EmissionsEvent",
-        handleEmissionDataFromContentScript
-      );
+      // document.removeEventListener(
+      //   "EmissionsEvent",
+      //   handleEmissionDataFromContentScript
+      // );
+      console.log(emissions);
     };
   }, []);
 
-  for (const emissionArray of emissions) {
-    console.log(emissionArray);
-  }
+  return (
+    <List className="emissionsList">
+      {emissions.map((emission, index) => (
+        <EmissionsPerTab {...emission} key={index} />
+      ))}
+    </List>
+  );
 }

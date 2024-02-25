@@ -43,7 +43,7 @@ export default function ExtendedPage() {
         </Box>
       </Portal>
 
-      <TabList returnedTabs={null} id="tabs" />
+      <TabList id="tabs" />
     </Container>
   );
 }
