@@ -1,1 +1,2 @@
-GET https://api.websitecarbon.com/site?url=https%3A%2F%2Fwww.wholegraindigital.com%2F
+GET https://api.websitecarbon.com/site?url=https%3A%2F%2Fwww.wholegraindigital.com%2F HTTP/1.1
+GET http://localhost:8080/getEmissions/https%3A%2F%2Fwww.wholegraindigital.com%2F
