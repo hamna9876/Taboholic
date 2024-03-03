@@ -7,14 +7,15 @@ import java.io.IOException;
 
 public class Test
 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         WebsiteCarbonController wcc = new WebsiteCarbonController();
         //System.out.println(wcc.readEmissionsData());
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String formattedJson = gson.toJson(wcc.readEmissionsData());
       //  System.out.println(formattedJson);
 
-        System.out.println(wcc.readSingleWebCarbonData());
+        formattedJson = gson.toJson(wcc.readSingleWebCarbonData
+                ("https://www.google.com/search"));
+        System.out.println(formattedJson);
     }
-
 }

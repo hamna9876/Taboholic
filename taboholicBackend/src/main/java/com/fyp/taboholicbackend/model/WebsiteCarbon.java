@@ -10,6 +10,9 @@ public class WebsiteCarbon
     private long timestamp;
     private String url;
 
+    public WebsiteCarbon() {
+    }
+
     public WebsiteCarbon(int bytes, double cleanerThan, boolean green, String rating, Statistics statistics, long timestamp, String url) {
         this.bytes = bytes;
         this.cleanerThan = cleanerThan;
