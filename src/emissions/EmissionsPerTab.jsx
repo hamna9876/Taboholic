@@ -19,19 +19,15 @@ export default function EmissionsPerTab({ url }) {
     };
     //https://api.websitecarbon.com/site?url=
 
-    request();
+    // request();
   }, []);
 
   return (
     <div className="EmissionsPerTab">
       <div>
-        green?{" "}
+        {" "}
         {emissionPerTab ? (
-          emissionPerTab.green ? (
-            <ColorSwatch color="green" />
-          ) : (
-            <ColorSwatch color="red" />
-          )
+          emissionPerTab.statistics.co2.grid.grams
         ) : (
           <Loader color="rgba(168, 44, 44, 1)" size="xs" />
         )}

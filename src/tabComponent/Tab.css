@@ -1,10 +1,32 @@
 .Tab {
-  max-width: 36em;
-  margin: -5px;
+  max-width: 37em;
+  /* margin: -5px; */
+  margin-top: 25px;
+  max-height: 100px;
+  display: flex;
+  margin-bottom: -5px;
+
+  /* display: flex;
+  align-items: center; */
 }
 
-.Tab:hover {
-  background-color: rgba(199, 143, 143, 0.26);
+.Emissions {
+  /* display: inline;
+  
+  margin-top: 10px; */
+  /* padding-bottom: 60px; */
+  max-height: 10px;
+  margin-top: 2%;
+  display: inline;
+}
+
+.TabButton {
+  display: inline;
+  max-width: 33em;
+  margin-left: 5%;
+  justify-content: flex-end;
+  margin-top: 0px !important;
+  margin-bottom: 0px;
 }
 
 .url {
