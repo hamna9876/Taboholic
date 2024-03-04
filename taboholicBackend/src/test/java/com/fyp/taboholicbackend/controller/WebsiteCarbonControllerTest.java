@@ -14,7 +14,6 @@ public class WebsiteCarbonControllerTest
     void setUp() throws IOException {
         websiteCarbonController = new WebsiteCarbonController();
         websiteCarbonController.readEmissionsData();
-
     }
 
     @Test
@@ -25,13 +24,13 @@ public class WebsiteCarbonControllerTest
         expectedWebsiteCarbon.setUrl("https://www.google.com/");
 
         //act
-//        WebsiteCarbon result = websiteCarbonController.
-//                readSingleWebCarbonData("https://www.google.com/search?q=test&oq=test&gs_lcrp=EgZjaHJvbWUyDAgAEEUYOR" +
-//                "ixAxiABDIOCAEQRRgnGDsYgAQYigUyDQgCEC4YrwEYxwEYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBggGEEUYPDIG" +
-//                "CAcQRRg80gEHNDcwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8");
+        WebsiteCarbon result = websiteCarbonController.
+                readSingleWebCarbonData("https://www.google.com/search?q=test&oq=test&gs_lcrp=EgZjaHJvbWUyDAgAEEUYOR" +
+                "ixAxiABDIOCAEQRRgnGDsYgAQYigUyDQgCEC4YrwEYxwEYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBggGEEUYPDIG" +
+                "CAcQRRg80gEHNDcwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8");
 
         //assert
-//        assertEquals(expectedWebsiteCarbon.getUrl(), result.getUrl());
+        assertEquals(expectedWebsiteCarbon.getUrl(), result.getUrl());
     }
 
 }

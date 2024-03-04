@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Tab from "../tabComponent/Tab";
 import "./TabList.css";
-import { List } from "@mantine/core";
+import { List, Space } from "@mantine/core";
 
 export default function TabList() {
   const [returnedTabs, setTabs] = useState([]);
@@ -15,6 +15,7 @@ export default function TabList() {
 
   return (
     <List className="TabList" withPadding spacing={"xs"}>
+      <div className="emissionText">Emissions (g) </div>
       {returnedTabs.map((tab) => {
         return <Tab {...tab} key={tab.id} />;
       })}

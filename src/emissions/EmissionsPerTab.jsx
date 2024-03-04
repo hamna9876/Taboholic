@@ -6,30 +6,39 @@ export default function EmissionsPerTab({ url }) {
   const [emissionPerTab, setEmissionPerTab] = useState(null);
 
   const encodedUrl = encodeURIComponent(url);
-  const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
+  // const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
+  const requestURL = `http://localhost:8080/getEmissions/?url=${encodedUrl}`;
 
   useEffect(() => {
     const request = async () => {
-      const response = await fetch(reqestURL);
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
-      setEmissionPerTab(data);
-      console.log(emissionPerTab.green);
+      try {
+        const response = await fetch(requestURL);
+        if (!response.ok) {
+          throw new Error("server response was not OK");
+        }
+        console.log(response);
+        const data = await response.json();
+        setEmissionPerTab(data);
+        console.log("returned", data);
+      } catch (error) {
+        console.error("error : ", error);
+        setEmissionPerTab("N/A");
+      }
     };
     //https://api.websitecarbon.com/site?url=
 
-    // request();
-  }, []);
+    request();
+  }, [url]);
 
   return (
     <div className="EmissionsPerTab">
       <div>
-        {" "}
-        {emissionPerTab ? (
-          emissionPerTab.statistics.co2.grid.grams
-        ) : (
+        {emissionPerTab === null ? (
           <Loader color="rgba(168, 44, 44, 1)" size="xs" />
+        ) : typeof emissionPerTab === "object" ? (
+          emissionPerTab.statistics.co2.grid.grams.toFixed(2) + ""
+        ) : (
+          "N/A"
         )}
         {/* bytes {emissionPerTab && emissionPerTab.bytes} */}
       </div>

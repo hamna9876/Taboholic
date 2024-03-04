@@ -1,4 +1,15 @@
 .TabList {
   padding-bottom: 4%;
-  margin-top: -1.5%;
+  margin-top: 6%;
+  position: relative;
+}
+
+.emissionText {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding-top: 70px;
+}
+.emissionText + p {
+  padding-top: 20%;
 }
