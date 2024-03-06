@@ -1,0 +1,904 @@
+{
+  "https://www.americanexpress.com/fi-fi/": {
+    "bytes": 1063763,
+    "cleanerThan": 0.75,
+    "green": true,
+    "rating": "B",
+    "statistics": {
+      "adjustedBytes": 803141.065,
+      "co2": {
+        "grid": {
+          "grams": 0.26779301845589654,
+          "litres": 0.14894647686516962
+        },
+        "renewable": {
+          "grams": 0.23216806486945604,
+          "litres": 0.12913187768039142
+        }
+      },
+      "energy": 6.058665575925261E-4
+    },
+    "timestamp": 1706286111,
+    "url": "https://www.americanexpress.com/fi-fi/"
+  },
+  "https://www.pinterest.com/": {
+    "bytes": 15630585,
+    "cleanerThan": 0.05,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 1.1801091675E7,
+      "co2": {
+        "grid": {
+          "grams": 3.934862875829917,
+          "litres": 2.188570731536599
+        },
+        "renewable": {
+          "grams": 3.4114014796787875,
+          "litres": 1.8974215029973411
+        }
+      },
+      "energy": 0.008902404696447775
+    },
+    "timestamp": 1706285437,
+    "url": "https://www.pinterest.com/"
+  },
+  "https://dictionary.cambridge.org": {
+    "bytes": 2907739,
+    "cleanerThan": 0.4,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 2195342.945,
+      "co2": {
+        "grid": {
+          "grams": 0.731997826293949,
+          "litres": 0.40713719098469436
+        },
+        "renewable": {
+          "grams": 0.6346189299453423,
+          "litres": 0.3529750488355993
+        }
+      },
+      "energy": 0.0016561036793980748
+    },
+    "timestamp": 1706286149,
+    "url": "https://dictionary.cambridge.org"
+  },
+  "https://www.instagram.com/": {
+    "bytes": 2351317,
+    "cleanerThan": 0.47,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1775244.335,
+      "co2": {
+        "grid": {
+          "grams": 0.5919234611249529,
+          "litres": 0.3292278290776987
+        },
+        "renewable": {
+          "grams": 0.5131788920884207,
+          "litres": 0.28543009977957956
+        }
+      },
+      "energy": 0.0013391933509614318
+    },
+    "timestamp": 1706284828,
+    "url": "https://www.instagram.com/"
+  },
+  "https://trello.com/": {
+    "bytes": 1552587,
+    "cleanerThan": 0.63,
+    "green": true,
+    "rating": "B",
+    "statistics": {
+      "adjustedBytes": 1172203.185,
+      "co2": {
+        "grid": {
+          "grams": 0.3908501791709103,
+          "litres": 0.21739086965486026
+        },
+        "renewable": {
+          "grams": 0.33885472547125073,
+          "litres": 0.18847099830710962
+        }
+      },
+      "energy": 8.84276423463598E-4
+    },
+    "timestamp": 1706285569,
+    "url": "https://trello.com/"
+  },
+  "https://www.wellsfargo.com/": {
+    "bytes": 2542412,
+    "cleanerThan": 0.44,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1919521.06,
+      "co2": {
+        "grid": {
+          "grams": 0.6400299537006766,
+          "litres": 0.35598466024831626
+        },
+        "renewable": {
+          "grams": 0.5548856974165142,
+          "litres": 0.3086274249030651
+        }
+      },
+      "energy": 0.0014480315694585444
+    },
+    "timestamp": 1706286047,
+    "url": "https://www.wellsfargo.com/"
+  },
+  "https://www.fidelity.com/": {
+    "bytes": 1687636,
+    "cleanerThan": 0.6,
+    "green": true,
+    "rating": "C",
+    "statistics": {
+      "adjustedBytes": 1274165.18,
+      "co2": {
+        "grid": {
+          "grams": 0.42484758211635054,
+          "litres": 0.23630022517311414
+        },
+        "renewable": {
+          "grams": 0.3683293969841302,
+          "litres": 0.20486481060257317
+        }
+      },
+      "energy": 9.611936246976256E-4
+    },
+    "timestamp": 1706286168,
+    "url": "https://www.fidelity.com/"
+  },
+  "https://www.amazon.com/": {
+    "bytes": 4735197,
+    "cleanerThan": 0.2,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 3575073.735,
+      "co2": {
+        "grid": {
+          "grams": 1.1920443723022007,
+          "litres": 0.6630150798744839
+        },
+        "renewable": {
+          "grams": 1.033464713724442,
+          "litres": 0.5748130737735345
+        }
+      },
+      "energy": 0.0026969329690095037
+    },
+    "timestamp": 1706279673,
+    "url": "https://www.amazon.com/"
+  },
+  "https://www.canva.com/": {
+    "bytes": 1367636,
+    "cleanerThan": 0.67,
+    "green": true,
+    "rating": "B",
+    "statistics": {
+      "adjustedBytes": 1032565.18,
+      "co2": {
+        "grid": {
+          "grams": 0.34429038478396834,
+          "litres": 0.19149431201684317
+        },
+        "renewable": {
+          "grams": 0.2984888584823907,
+          "litres": 0.16601950308790567
+        }
+      },
+      "energy": 7.78937522135675E-4
+    },
+    "timestamp": 1706285586,
+    "url": "https://www.canva.com/"
+  },
+  "https://www.realtor.com/": {
+    "bytes": 4330878,
+    "cleanerThan": 0.22,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 3269812.89,
+      "co2": {
+        "grid": {
+          "grams": 1.0902606052139776,
+          "litres": 0.6064029486200142
+        },
+        "renewable": {
+          "grams": 0.945221411579177,
+          "litres": 0.5257321491203382
+        }
+      },
+      "energy": 0.0024666529529728
+    },
+    "timestamp": 1706285924,
+    "url": "https://www.realtor.com/"
+  },
+  "https://www.kraken.com/": {
+    "bytes": 7186925,
+    "cleanerThan": 0.15,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 5426128.375,
+      "co2": {
+        "grid": {
+          "grams": 1.809245423243847,
+          "litres": 1.0063023044082275
+        },
+        "renewable": {
+          "grams": 1.5685584755362945,
+          "litres": 0.8724322240932868
+        }
+      },
+      "energy": 0.004093315437203274
+    },
+    "timestamp": 1706286282,
+    "url": "https://www.kraken.com/"
+  },
+  "https://www.bankofamerica.com/": {
+    "bytes": 3030890,
+    "cleanerThan": 0.33,
+    "green": false,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2288321.95,
+      "co2": {
+        "grid": {
+          "grams": 0.7630000119460747,
+          "litres": 0.4243806066444067
+        },
+        "renewable": {
+          "grams": 0.6614968429360542,
+          "litres": 0.36792454404103325
+        }
+      },
+      "energy": 0.0017262443709187211
+    },
+    "timestamp": 1706286022,
+    "url": "https://www.bankofamerica.com/"
+  },
+  "https://discord.com/": {
+    "bytes": 3250392,
+    "cleanerThan": 0.35,
+    "green": true,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2454045.96,
+      "co2": {
+        "grid": {
+          "grams": 0.8182577179737389,
+          "litres": 0.4551149427369935
+        },
+        "renewable": {
+          "grams": 0.7094035238179566,
+          "litres": 0.39457023994754736
+        }
+      },
+      "energy": 0.0018512618053704501
+    },
+    "timestamp": 1706285668,
+    "url": "https://discord.com/"
+  },
+  "https://www.chase.com/": {
+    "bytes": 2305087,
+    "cleanerThan": 0.48,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1740340.685,
+      "co2": {
+        "grid": {
+          "grams": 0.5802854635228404,
+          "litres": 0.32275477481140374
+        },
+        "renewable": {
+          "grams": 0.5030891167917476,
+          "litres": 0.27981816675956994
+        }
+      },
+      "energy": 0.0013128630396444351
+    },
+    "timestamp": 1706285975,
+    "url": "https://www.chase.com/"
+  },
+  "https://twitter.com/": {
+    "bytes": 1580523,
+    "cleanerThan": 0.58,
+    "green": false,
+    "rating": "C",
+    "statistics": {
+      "adjustedBytes": 1193294.865,
+      "co2": {
+        "grid": {
+          "grams": 0.39788282249802726,
+          "litres": 0.2213024258734027
+        },
+        "renewable": {
+          "grams": 0.3449518044824526,
+          "litres": 0.1918621936531401
+        }
+      },
+      "energy": 9.001873812172562E-4
+    },
+    "timestamp": 1706279883,
+    "url": "https://twitter.com/"
+  },
+  "https://www.yelp.com/": {
+    "bytes": 2268628,
+    "cleanerThan": 0.43,
+    "green": false,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1712814.14,
+      "co2": {
+        "grid": {
+          "grams": 0.5711072295930236,
+          "litres": 0.3176498410996397
+        },
+        "renewable": {
+          "grams": 0.49513187868788844,
+          "litres": 0.2753923509262035
+        }
+      },
+      "energy": 0.0012920978045091033
+    },
+    "timestamp": 1706285613,
+    "url": "https://www.yelp.com/"
+  },
+  "https://www.youtube.com/": {
+    "bytes": 3537275,
+    "cleanerThan": 0.33,
+    "green": true,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2670642.625,
+      "co2": {
+        "grid": {
+          "grams": 0.8904780006059446,
+          "litres": 0.4952838639370263
+        },
+        "renewable": {
+          "grams": 0.7720162213398145,
+          "litres": 0.42939542230920474
+        }
+      },
+      "energy": 0.0020146561099682004
+    },
+    "timestamp": 1706285396,
+    "url": "https://www.youtube.com/"
+  },
+  "https://www.yahoo.com/": {
+    "bytes": 3583054,
+    "cleanerThan": 0.27,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 2705205.77,
+      "co2": {
+        "grid": {
+          "grams": 0.9020024629080668,
+          "litres": 0.5016937698694667
+        },
+        "renewable": {
+          "grams": 0.7820075651275368,
+          "litres": 0.43495260772393585
+        }
+      },
+      "energy": 0.002040729554090649
+    },
+    "timestamp": 1706284791,
+    "url": "https://www.yahoo.com/"
+  },
+  "https://www.citi.com/": {
+    "bytes": 7049377,
+    "cleanerThan": 0.15,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 5322279.635,
+      "co2": {
+        "grid": {
+          "grams": 1.7746189189354888,
+          "litres": 0.9870430427119187
+        },
+        "renewable": {
+          "grams": 1.538538393068053,
+          "litres": 0.8557350542244508
+        }
+      },
+      "energy": 0.004014974929718301
+    },
+    "timestamp": 1706286091,
+    "url": "https://www.citi.com/"
+  },
+  "https://www.netflix.com/be-en/": {
+    "bytes": 906399,
+    "cleanerThan": 0.8,
+    "green": true,
+    "rating": "B",
+    "statistics": {
+      "adjustedBytes": 684331.245,
+      "co2": {
+        "grid": {
+          "grams": 0.22817800970273092,
+          "litres": 0.1269126089966589
+        },
+        "renewable": {
+          "grams": 0.19782310705449435,
+          "litres": 0.11002921214370974
+        }
+      },
+      "energy": 5.162398409564048E-4
+    },
+    "timestamp": 1706284852,
+    "url": "https://www.netflix.com/be-en/"
+  },
+  "https://www.buzzfeednews.com/": {
+    "bytes": 3605312,
+    "cleanerThan": 0.32,
+    "green": true,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2722010.56,
+      "co2": {
+        "grid": {
+          "grams": 0.9076057194650174,
+          "litres": 0.5048103011664427
+        },
+        "renewable": {
+          "grams": 0.7868654110836983,
+          "litres": 0.4376545416447529
+        }
+      },
+      "energy": 0.0020534066051244738
+    },
+    "timestamp": 1706285645,
+    "url": "https://www.buzzfeednews.com/"
+  },
+  "https://www.patreon.com/": {
+    "bytes": 7404409,
+    "cleanerThan": 0.14,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 5590328.795,
+      "co2": {
+        "grid": {
+          "grams": 1.8639951154458336,
+          "litres": 1.0367540832109725
+        },
+        "renewable": {
+          "grams": 1.6160247245222703,
+          "litres": 0.8988329517792866
+        }
+      },
+      "energy": 0.004217183519108221
+    },
+    "timestamp": 1706285865,
+    "url": "https://www.patreon.com/"
+  },
+  "https://investor.vanguard.com/corporate-portal": {
+    "bytes": 1641183,
+    "cleanerThan": 0.57,
+    "green": false,
+    "rating": "C",
+    "statistics": {
+      "adjustedBytes": 1239093.165,
+      "co2": {
+        "grid": {
+          "grams": 0.41315344621734695,
+          "litres": 0.22979594678608833
+        },
+        "renewable": {
+          "grams": 0.3581909515621886,
+          "litres": 0.19922580725888928
+        }
+      },
+      "energy": 9.34736303659156E-4
+    },
+    "timestamp": 1706286190,
+    "url": "https://investor.vanguard.com/corporate-portal"
+  },
+  "https://www.redfin.com/": {
+    "bytes": 5154406,
+    "cleanerThan": 0.18,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 3891576.53,
+      "co2": {
+        "grid": {
+          "grams": 1.2975765664787964,
+          "litres": 0.7217120862755064
+        },
+        "renewable": {
+          "grams": 1.124957783426866,
+          "litres": 0.6257015191420228
+        }
+      },
+      "energy": 0.0029356935893185437
+    },
+    "timestamp": 1706285889,
+    "url": "https://www.redfin.com/"
+  },
+  "https://www.schwab.com/": {
+    "bytes": 2907739,
+    "cleanerThan": 0.4,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 2195342.945,
+      "co2": {
+        "grid": {
+          "grams": 0.731997826293949,
+          "litres": 0.40713719098469436
+        },
+        "renewable": {
+          "grams": 0.6346189299453423,
+          "litres": 0.3529750488355993
+        }
+      },
+      "energy": 0.0016561036793980748
+    },
+    "timestamp": 1706286149,
+    "url": "https://www.schwab.com/"
+  },
+  "https://www.groupon.com/": {
+    "bytes": 3555639,
+    "cleanerThan": 0.32,
+    "green": true,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2684507.445,
+      "co2": {
+        "grid": {
+          "grams": 0.8951009767678566,
+          "litres": 0.4978551632782817
+        },
+        "renewable": {
+          "grams": 0.776024195243083,
+          "litres": 0.43162465739420264
+        }
+      },
+      "energy": 0.0020251153320539742
+    },
+    "timestamp": 1706285557,
+    "url": "https://www.groupon.com/"
+  },
+  "https://www.forbes.com/": {
+    "bytes": 6878224,
+    "cleanerThan": 0.13,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 5193059.12,
+      "co2": {
+        "grid": {
+          "grams": 1.7315326502010229,
+          "litres": 0.9630784600418087
+        },
+        "renewable": {
+          "grams": 1.501183962798715,
+          "litres": 0.834958520108645
+        }
+      },
+      "energy": 0.0039174946837127215
+    },
+    "timestamp": 1706285757,
+    "url": "https://www.forbes.com/"
+  },
+  "https://www.foxsports.com/": {
+    "bytes": 16157026,
+    "cleanerThan": 0.05,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 1.219855463E7,
+      "co2": {
+        "grid": {
+          "grams": 4.067389786832594,
+          "litres": 2.2622821994362883
+        },
+        "renewable": {
+          "grams": 3.5262981138331453,
+          "litres": 1.961327010913995
+        }
+      },
+      "energy": 0.009202239336725326
+    },
+    "timestamp": 1706285805,
+    "url": "https://www.foxsports.com/"
+  },
+  "https://www.bitfinex.com/": {
+    "bytes": 2949261,
+    "cleanerThan": 0.39,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 2226692.055,
+      "co2": {
+        "grid": {
+          "grams": 0.7424506261303091,
+          "litres": 0.41295103825367785
+        },
+        "renewable": {
+          "grams": 0.6436811763193087,
+          "litres": 0.35801547026879943
+        }
+      },
+      "energy": 0.001679752547806129
+    },
+    "timestamp": 1706286349,
+    "url": "https://www.bitfinex.com/"
+  },
+  "https://www.tdameritrade.com/": {
+    "bytes": 2324696,
+    "cleanerThan": 0.48,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1755145.48,
+      "co2": {
+        "grid": {
+          "grams": 0.5852218575306237,
+          "litres": 0.32550039715853285
+        },
+        "renewable": {
+          "grams": 0.5073688140401245,
+          "litres": 0.2821985343691172
+        }
+      },
+      "energy": 0.001324031351879239
+    },
+    "timestamp": 1706286209,
+    "url": "https://www.tdameritrade.com/"
+  },
+  "https://www.blockchain.com/": {
+    "bytes": 2976509,
+    "cleanerThan": 0.39,
+    "green": true,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 2247264.295,
+      "co2": {
+        "grid": {
+          "grams": 0.7493100714831613,
+          "litres": 0.4167662617589342
+        },
+        "renewable": {
+          "grams": 0.6496280981727318,
+          "litres": 0.36132314820367334
+        }
+      },
+      "energy": 0.001695271654939279
+    },
+    "timestamp": 1706286325,
+    "url": "https://www.blockchain.com/"
+  },
+  "https://www.facebook.com/": {
+    "bytes": 688743,
+    "cleanerThan": 0.85,
+    "green": true,
+    "rating": "A",
+    "statistics": {
+      "adjustedBytes": 520000.965,
+      "co2": {
+        "grid": {
+          "grams": 0.1733850180071779,
+          "litres": 0.09643674701559232
+        },
+        "renewable": {
+          "grams": 0.15031931877907367,
+          "litres": 0.08360760510492075
+        }
+      },
+      "energy": 3.9227379639633007E-4
+    },
+    "timestamp": 1706279687,
+    "url": "https://www.facebook.com/"
+  },
+  "https://www.squarespace.com/": {
+    "bytes": 4755058,
+    "cleanerThan": 0.2,
+    "green": false,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 3590068.79,
+      "co2": {
+        "grid": {
+          "grams": 1.1970442051028833,
+          "litres": 0.6657959868782236
+        },
+        "renewable": {
+          "grams": 1.0377994103968893,
+          "litres": 0.5772240320627497
+        }
+      },
+      "energy": 0.0027082448079250756
+    },
+    "timestamp": 1706285723,
+    "url": "https://www.squarespace.com/"
+  },
+  "https://www.robinhood.com/us/en/": {
+    "bytes": 1971261,
+    "cleanerThan": 0.48,
+    "green": false,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1488302.055,
+      "co2": {
+        "grid": {
+          "grams": 0.49624769178321587,
+          "litres": 0.2760129661698246
+        },
+        "renewable": {
+          "grams": 0.43023103052336736,
+          "litres": 0.2392944991770969
+        }
+      },
+      "energy": 0.0011227323343511672
+    },
+    "timestamp": 1706286229,
+    "url": "https://www.robinhood.com/us/en/"
+  },
+  "https://www.reddit.com/": {
+    "bytes": 2703864,
+    "cleanerThan": 0.37,
+    "green": false,
+    "rating": "E",
+    "statistics": {
+      "adjustedBytes": 2041417.32,
+      "co2": {
+        "grid": {
+          "grams": 0.6806740806497634,
+          "litres": 0.3785909236573983
+        },
+        "renewable": {
+          "grams": 0.5901228681108357,
+          "litres": 0.32822633924324673
+        }
+      },
+      "energy": 0.0015399866078048947
+    },
+    "timestamp": 1706279855,
+    "url": "https://www.reddit.com/"
+  },
+  "https://www.nationalgeographic.com/": {
+    "bytes": 7394835,
+    "cleanerThan": 0.14,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 5583100.425,
+      "co2": {
+        "grid": {
+          "grams": 1.8615849447981454,
+          "litres": 1.0354135462967282
+        },
+        "renewable": {
+          "grams": 1.6139351829109716,
+          "litres": 0.8976707487350822
+        }
+      },
+      "energy": 0.004211730644339696
+    },
+    "timestamp": 1706285834,
+    "url": "https://www.nationalgeographic.com/"
+  },
+  "https://slack.com/": {
+    "bytes": 11484545,
+    "cleanerThan": 0.08,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 8670831.475,
+      "co2": {
+        "grid": {
+          "grams": 2.891133618242573,
+          "litres": 1.6080485184665188
+        },
+        "renewable": {
+          "grams": 2.506521272648313,
+          "litres": 1.3941271318469914
+        }
+      },
+      "energy": 0.0065410262856166815
+    },
+    "timestamp": 1706285516,
+    "url": "https://slack.com/"
+  },
+  "https://www.ebay.com/": {
+    "bytes": 2207228,
+    "cleanerThan": 0.5,
+    "green": true,
+    "rating": "C",
+    "statistics": {
+      "adjustedBytes": 1666457.14,
+      "co2": {
+        "grid": {
+          "grams": 0.5556503173548728,
+          "litres": 0.3090527065127802
+        },
+        "renewable": {
+          "grams": 0.4817312253628672,
+          "litres": 0.2679389075468267
+        }
+      },
+      "energy": 0.001257127414830029
+    },
+    "timestamp": 1706279908,
+    "url": "https://www.ebay.com/"
+  },
+  "https://www.coinbase.com/": {
+    "bytes": 4126188,
+    "cleanerThan": 0.28,
+    "green": true,
+    "rating": "F",
+    "statistics": {
+      "adjustedBytes": 3115271.94,
+      "co2": {
+        "grid": {
+          "grams": 1.0387316904578359,
+          "litres": 0.5777425662326482
+        },
+        "renewable": {
+          "grams": 0.9005474746231735,
+          "litres": 0.500884505385409
+        }
+      },
+      "energy": 0.0023500716978684067
+    },
+    "timestamp": 1706286253,
+    "url": "https://www.coinbase.com/"
+  },
+  "https://www.google.com/": {
+    "bytes": 967434,
+    "cleanerThan": 0.78,
+    "green": true,
+    "rating": "B",
+    "statistics": {
+      "adjustedBytes": 730412.67,
+      "co2": {
+        "grid": {
+          "grams": 0.24354303638767455,
+          "litres": 0.13545863683882456
+        },
+        "renewable": {
+          "grams": 0.2111440985152871,
+          "litres": 0.11743834759420266
+        }
+      },
+      "energy": 5.510023447684944E-4
+    },
+    "timestamp": 1706285369,
+    "url": "https://www.google.com/"
+  },
+  "https://www.binance.com/en": {
+    "bytes": 2545343,
+    "cleanerThan": 0.39,
+    "green": false,
+    "rating": "D",
+    "statistics": {
+      "adjustedBytes": 1921733.965,
+      "co2": {
+        "grid": {
+          "grams": 0.6407678072799929,
+          "litres": 0.356395054409132
+        },
+        "renewable": {
+          "grams": 0.5555253930988536,
+          "litres": 0.3089832236415823
+        }
+      },
+      "energy": 0.0014497009214479478
+    },
+    "timestamp": 1706286310,
+    "url": "https://www.binance.com/en"
+  }
+}
