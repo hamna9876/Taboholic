@@ -13,15 +13,11 @@ public class Test
         WebsiteCarbonController wc = new WebsiteCarbonController();
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String formattedJson = gson.toJson(wc.readEmissionsData());
+        //String formattedJson = gson.toJson(wc.readEmissionsData());
 
-//        JsonReader reader = new JsonReader(new StringReader(formattedJson));
-//        reader.setLenient(true);
-//        System.out.println(formattedJson);
-
-//       String formattedJson = gson.toJson(wcc.readSingleWebCarbonData
-//                ()); // https://www.mybib.com/ https://www.google.com/search
-//       System.out.println(formattedJson);
+       String formattedJson = gson.toJson(wc.readSingleWebCarbonData
+                ("https://www.amazon.com")); // https://www.mybib.com/ https://www.google.com/search
+       System.out.println(formattedJson);
 
     }
 }

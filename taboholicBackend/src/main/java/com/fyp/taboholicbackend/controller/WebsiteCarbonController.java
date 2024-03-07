@@ -77,7 +77,7 @@ public class WebsiteCarbonController
         for (String key : websiteCarbonData.keySet()) {
             url = trimURL(url);
             if (key != null && url.startsWith(key)) {
-                System.out.println("found" + key);
+              //  System.out.println("found" + key);
                 return websiteCarbonData.get(key);
             }
         }
@@ -149,6 +149,7 @@ public class WebsiteCarbonController
         try {
             parsedUrl = new URL(url);
             trimmedUrl = parsedUrl.getProtocol() + "://" + parsedUrl.getHost() + "/";
+          //  System.out.println(trimmedUrl + " " + parsedUrl.getPath() );
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
