@@ -8,7 +8,9 @@ export default function Tab({ id, favIcon, title, url }) {
   //const hasFavIcon = !favIcon === undefined || favIcon.length > 0;
   const { hovered, ref } = useHover();
 
-  const deleteTab = () => {
+  const deleteTab = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     console.log(id);
     chrome.tabs.remove(id);
     console.log("tab removed");

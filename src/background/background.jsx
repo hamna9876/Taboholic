@@ -5,7 +5,7 @@ function getTabArray() {
       id: tab.id,
       title: tab.title,
       url: tab.url,
-      favIcon: tab.favIconUrl
+      favIcon: tab.favIconUrl,
     }));
 
     chrome.storage.local.set({ returnedTabs: tabArray });
