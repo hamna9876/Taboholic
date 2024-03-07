@@ -63,16 +63,16 @@ console.log("Background script is running"); // okay this works
 
 getTabArray();
 
-chrome.storage.local.get(["returnedTabs"], (result) => {
-  const tabArray = result.returnedTabs || [];
+// chrome.storage.local.get(["returnedTabs"], (result) => {
+//   const tabArray = result.returnedTabs || [];
 
-  // Send the data to the content script of all tabs
-  chrome.tabs.query({}, (tabs) => {
-    tabs.forEach((tab) => {
-      chrome.tabs.sendMessage(tab.id, { tabArray: tabArray });
-    });
-  });
-});
+//   // Send the data to the content script of all tabs
+//   chrome.tabs.query({}, (tabs) => {
+//     tabs.forEach((tab) => {
+//       chrome.tabs.sendMessage(tab.id, { tabArray: tabArray });
+//     });
+//   });
+// });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.tabData) {
