@@ -5,11 +5,22 @@ import { ColorSwatch, Loader } from "@mantine/core";
 export default function EmissionsPerTab({ url }) {
   const [emissionPerTab, setEmissionPerTab] = useState(null);
 
-  const encodedUrl = encodeURIComponent(url);
-  // const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
-  const requestURL = `http://localhost:8080/getEmissions/?url=${encodedUrl}`;
+  const isValidURL = (url) => {
+    // Regular expression to match URLs starting with http:// or https://
+    const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    return urlPattern.test(url);
+  };
 
   useEffect(() => {
+    if (!isValidURL(url)) {
+      // If the URL is not valid, set emissions to "N/A"
+      setEmissionPerTab("N/A");
+      return;
+    }
+    const encodedUrl = encodeURIComponent(url);
+    // const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
+    const requestURL = `http://localhost:8080/getEmissions/?url=${encodedUrl}`;
+
     const request = async () => {
       try {
         const response = await fetch(requestURL);
