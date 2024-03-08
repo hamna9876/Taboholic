@@ -6,8 +6,8 @@ export default function EmissionsPerTab({ url }) {
   const [emissionPerTab, setEmissionPerTab] = useState(null);
 
   const isValidURL = (url) => {
-    // Regular expression to match URLs starting with http:// or https://
-    const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    // Regular expression to match with https://
+    const urlPattern = /^https:\/\//i;
     return urlPattern.test(url);
   };
 

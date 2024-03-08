@@ -176,50 +176,6 @@
     "url": "https://www.netflix.com/be-en/"
   },
   {
-    "bytes": 15630585,
-    "cleanerThan": 0.05,
-    "green": true,
-    "rating": "F",
-    "statistics": {
-      "adjustedBytes": 11801091.675,
-      "co2": {
-        "grid": {
-          "grams": 3.934862875829917,
-          "litres": 2.188570731536599
-        },
-        "renewable": {
-          "grams": 3.4114014796787875,
-          "litres": 1.8974215029973411
-        }
-      },
-      "energy": 0.008902404696447775
-    },
-    "timestamp": 1706285437,
-    "url": "https://www.pinterest.com/"
-  },
-  {
-    "bytes": 11484545,
-    "cleanerThan": 0.08,
-    "green": true,
-    "rating": "F",
-    "statistics": {
-      "adjustedBytes": 8670831.475,
-      "co2": {
-        "grid": {
-          "grams": 2.891133618242573,
-          "litres": 1.6080485184665188
-        },
-        "renewable": {
-          "grams": 2.506521272648313,
-          "litres": 1.3941271318469914
-        }
-      },
-      "energy": 0.0065410262856166815
-    },
-    "timestamp": 1706285516,
-    "url": "https://slack.com/"
-  },
-  {
     "bytes": 3555639,
     "cleanerThan": 0.32,
     "green": true,
@@ -394,28 +350,6 @@
     },
     "timestamp": 1706285757,
     "url": "https://www.forbes.com/"
-  },
-  {
-    "bytes": 16157026,
-    "cleanerThan": 0.05,
-    "green": true,
-    "rating": "F",
-    "statistics": {
-      "adjustedBytes": 12198554.63,
-      "co2": {
-        "grid": {
-          "grams": 4.067389786832594,
-          "litres": 2.2622821994362883
-        },
-        "renewable": {
-          "grams": 3.5262981138331453,
-          "litres": 1.961327010913995
-        }
-      },
-      "energy": 0.009202239336725326
-    },
-    "timestamp": 1706285805,
-    "url": "https://www.foxsports.com/"
   },
   {
     "bytes": 7394835,
