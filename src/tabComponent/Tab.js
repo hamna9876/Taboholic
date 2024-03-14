@@ -37,7 +37,7 @@ export default function Tab({ id, favIcon, title, url }) {
         rightSection={
           <CloseButton
             onClick={deleteTab}
-            size="sm"
+            size="md"
             aria-label="Close tab"
           ></CloseButton>
         }
