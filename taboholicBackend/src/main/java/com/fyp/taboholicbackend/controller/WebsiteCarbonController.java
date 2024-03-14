@@ -188,10 +188,10 @@ public class WebsiteCarbonController
         return null;
     }
 
-//    @GetMapping("/testHelloWorld")
-//    public String testHelloWorld() {
-//        return "hello World";
-//    }
+    @GetMapping("/testHelloWorld")
+    public String testHelloWorld() {
+        return "hello World";
+    }
 
     //StringBuilder emissionsData = new StringBuilder();
     //        String fileName = "emissionData.json";
@@ -206,5 +206,3 @@ public class WebsiteCarbonController
 
 
 }
-
-

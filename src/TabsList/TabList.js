@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Tab from "../tabComponent/Tab";
 import "./TabList.css";
-import { List, Space } from "@mantine/core";
+import { List } from "@mantine/core";
 
 export default function TabList() {
   const [returnedTabs, setTabs] = useState([]);

@@ -19,7 +19,7 @@ export default function EmissionsPerTab({ url }) {
     }
     const encodedUrl = encodeURIComponent(url);
     // const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
-    const requestURL = `http://localhost:8080/getEmissions/?url=${encodedUrl}`;
+    const requestURL = `https://taboholic.onrender.com/getEmissions/?url=${encodedUrl}`;
 
     const request = async () => {
       try {
