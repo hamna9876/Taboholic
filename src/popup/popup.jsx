@@ -18,7 +18,7 @@ export default function Popup() {
           <Title className="ExtensionName" pl={10}>
             Taboholic
           </Title>
-          {/* <ClickButton buttonText="Show more" /> */}
+          <ClickButton buttonText="Show more" />
         </Group>
         <TabList />
       </ScrollArea>

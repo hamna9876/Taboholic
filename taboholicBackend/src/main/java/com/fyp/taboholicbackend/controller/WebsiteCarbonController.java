@@ -44,7 +44,7 @@ public class WebsiteCarbonController
 
     public Map<String, WebsiteCarbon> readEmissionsData() {
 
-        ClassPathResource resource = new ClassPathResource("emissionData/emissionData.json");
+        ClassPathResource resource = new ClassPathResource("emissionData/emissionData2.json");
         byte[] jsonData = new byte[0];
         try {
             jsonData = FileCopyUtils.copyToByteArray(resource.getInputStream());
@@ -82,16 +82,7 @@ public class WebsiteCarbonController
             }
         }
 
-       // if (websiteCarbonData)
-        //String key = pickFromData();
-        WebsiteCarbon pickedData = readFromSeedData(); //method for picking from the seed data,
-
-        addToMap(url, pickedData); //method for setting URL
-
-       //System.out.println();
-         //method for appending to the file
-
-        return pickedData;
+      return null;
     }
 
 
@@ -206,3 +197,11 @@ public class WebsiteCarbonController
 
 
 }
+
+//Username: hamnaaamer9876
+//Password: PUQsO5fAhys8FRcv
+
+//connection string:
+// mongodb+srv://hamnaaamer9876:PUQsO5fAhys8FRcv@taboholicdb.cnts44t.mongodb.net/?retryWrites=true&w=majority&appName=taboholicDB
+
+//connection string 2 : mongodb+srv://hamnaaamer9876:PUQsO5fAhys8FRcv@taboholicdb.cnts44t.mongodb.net/
