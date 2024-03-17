@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
 
 class TaboholicMongoDBTest {
     @Test
@@ -78,5 +80,31 @@ class TaboholicMongoDBTest {
             assertNull(urlDocument, "document was found, test failed");
         }
     }
+
+//    @Test
+//    void testMongoDBReturnsEmissionGrams() {
+//
+//        //arrange
+//        String uri = "mongodb+srv://hamnaaamer9876:PUQsO5fAhys8FRcv@taboholicdb.cnts44t.mongodb.net/" +
+//                "?retryWrites=true&w=majority&appName=taboholicDB";
+//        Document urlFilter = new Document("url", "https://www.youtube.com/");
+//        Double expectedGrams = 0.8904780006059446;
+//
+//        //act
+//        try (MongoClient mongoClient = MongoClients.create(uri)) {
+//            MongoDatabase database = mongoClient.getDatabase("TabDB");
+//            MongoCollection<Document> collection = database.getCollection("TabData");
+//            Document urlDocument = collection.find(urlFilter).first();
+//
+//            System.out.println(urlDocument);
+//
+////            Double actualGrams = urlDocument.get("statistics", Document.class)
+////                                        .get("co2", Document.class)
+////                                        .getDouble("grams");
+//            //assert
+//            assertNotNull(urlDocument, "document was not found, test failed");
+//            //assertEquals(expectedGrams, actualGrams);
+//        }
+//    }
 
 }

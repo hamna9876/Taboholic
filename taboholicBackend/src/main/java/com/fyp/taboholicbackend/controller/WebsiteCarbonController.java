@@ -3,6 +3,11 @@ package com.fyp.taboholicbackend.controller;
 import com.fyp.taboholicbackend.model.WebsiteCarbon;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,7 +65,7 @@ public class WebsiteCarbonController
 
     }
 
-    @GetMapping("/getEmissions/")
+   // @GetMapping("/getEmissions/")
     public WebsiteCarbon readSingleWebCarbonData(@RequestParam("url") String url) {
         logger.info("Received URL: {}", url);
         readEmissionsData();
@@ -72,6 +77,34 @@ public class WebsiteCarbonController
             }
         }
       return null;
+    }
+
+
+    private Document getEmissionData(String url) {
+        String uri = "mongodb+srv://hamnaaamer9876:PUQsO5fAhys8FRcv@taboholicdb.cnts44t.mongodb.net/" +
+                "?retryWrites=true&w=majority&appName=taboholicDB";
+        Document urlFilter = new Document("url", url);
+
+        //act
+        try (MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("TabDB");
+            MongoCollection<Document> collection = database.getCollection("TabData");
+            Document urlDocument = collection.find(urlFilter).first();
+            return urlDocument;
+        } catch (Exception e) {
+            logger.error("Error getting emission data for URL: " + url, e);
+            return null;
+        }
+    }
+
+    @GetMapping("/getEmissions/")
+    public Document getSingleWebCarbonDataMongoDB(@RequestParam("url") String url) {
+        logger.info("Received URL: {}", url);
+        url = trimURL(url);
+        if(getEmissionData(url) != null ) {
+            return getEmissionData(url);
+        }
+        return null;
     }
 
     private WebsiteCarbon pickFromData(WebsiteCarbon[] websiteCarbons) {
@@ -122,7 +155,7 @@ public class WebsiteCarbonController
 
     }
 
-    private String trimURL(String url) {
+    String trimURL(String url) {
         URL parsedUrl = null;
         String trimmedUrl;
         try {
@@ -130,7 +163,7 @@ public class WebsiteCarbonController
             trimmedUrl = parsedUrl.getProtocol() + "://" + parsedUrl.getHost() + "/";
           //  System.out.println(trimmedUrl + " " + parsedUrl.getPath() );
         } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException(e);
         }
         return trimmedUrl;
     }
