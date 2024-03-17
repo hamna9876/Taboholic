@@ -3,8 +3,6 @@ package com.fyp.taboholicbackend.controller;
 import com.fyp.taboholicbackend.model.WebsiteCarbon;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import org.slf4j.Logger;
@@ -20,11 +17,16 @@ import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 
-@RestController
+import static com.fyp.taboholicbackend.Utils.readFromFileToJSON;
 
+@RestController
 public class WebsiteCarbonController
 {
     private static final Logger logger = LoggerFactory.getLogger(WebsiteCarbonController.class);
+
+    public Map<String, WebsiteCarbon> getWebsiteCarbonData() {
+        return websiteCarbonData;
+    }
 
     private Map<String, WebsiteCarbon> websiteCarbonData = new HashMap<>();
 
@@ -43,21 +45,10 @@ public class WebsiteCarbonController
 //    }
 
     public Map<String, WebsiteCarbon> readEmissionsData() {
-
-        ClassPathResource resource = new ClassPathResource("emissionData/emissionData2.json");
-        byte[] jsonData = new byte[0];
-        try {
-            jsonData = FileCopyUtils.copyToByteArray(resource.getInputStream());
-        } catch (IOException e) {
-            System.out.println("error reading emissions file");
-        }
-        String jsonString = new String(jsonData, StandardCharsets.UTF_8);
-
-        //String jsonString = readFromFileToJSON("emissionData/emissionData.json");
+        String jsonString = readFromFileToJSON("emissionData/emissionData2.json");
 
         Gson gson = new Gson();
         WebsiteCarbon[] dataArray = gson.fromJson(jsonString, WebsiteCarbon[].class);
-
 
         for (WebsiteCarbon websiteCarbon : dataArray) {
             websiteCarbonData.put(websiteCarbon.getUrl(), websiteCarbon);
@@ -73,7 +64,6 @@ public class WebsiteCarbonController
     public WebsiteCarbon readSingleWebCarbonData(@RequestParam("url") String url) {
         logger.info("Received URL: {}", url);
         readEmissionsData();
-
         for (String key : websiteCarbonData.keySet()) {
             url = trimURL(url);
             if (key != null && url.startsWith(key)) {
@@ -81,10 +71,8 @@ public class WebsiteCarbonController
                 return websiteCarbonData.get(key);
             }
         }
-
       return null;
     }
-
 
     private WebsiteCarbon pickFromData(WebsiteCarbon[] websiteCarbons) {
 
@@ -146,20 +134,6 @@ public class WebsiteCarbonController
         }
         return trimmedUrl;
     }
-    private String readFromFileToJSON(String path) {
-
-        ClassPathResource resource = new ClassPathResource(path);
-        byte[] jsonData = new byte[0];
-        try {
-            jsonData = FileCopyUtils.copyToByteArray(resource.getInputStream());
-        } catch (IOException e) {
-            System.out.println("error reading emissions file");
-        }
-        String jsonString = new String(jsonData, StandardCharsets.UTF_8);
-        return jsonString;
-    }
-
-
 
     //test with hard-corded URL input
     @GetMapping("/getEmissions")
@@ -194,7 +168,6 @@ public class WebsiteCarbonController
     //            emissionsData.append(line).append("\n");
     //        }
     //        bufferedReader.close();
-
 
 }
 
