@@ -1,13 +1,23 @@
 package com.fyp.taboholicbackend.model;
 
+import org.bson.Document;
+import org.bson.codecs.pojo.annotations.BsonProperty;
+
 public class WebsiteCarbon
 {
+    @BsonProperty
     private int bytes;
+    @BsonProperty
     private double cleanerThan;
+    @BsonProperty
     private boolean green;
+    @BsonProperty
     private String rating;
+    @BsonProperty
     private Statistics statistics;
+    @BsonProperty
     private long timestamp;
+    @BsonProperty
     private String url;
 
     public WebsiteCarbon() {
