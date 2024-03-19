@@ -1,10 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { ColorSwatch, Loader } from "@mantine/core";
+import { Loader } from "@mantine/core";
 import axios from "axios";
 
 export default function EmissionsPerTab({ url }) {
   const [emissionPerTab, setEmissionPerTab] = useState(null);
+  const AVERAGE_IMAGE_BYTE_SIZE = 92236.5;
 
   const isValidURL = (url) => {
     // Regular expression to man[tch with https://
@@ -23,6 +24,7 @@ export default function EmissionsPerTab({ url }) {
         const encodedUrl = encodeURIComponent(url);
         // const reqestURL = `https://api.websitecarbon.com/site?url=${encodedUrl}`;
         const requestURL = `http://localhost:8080/getEmissions/?url=${encodedUrl}`;
+        console.log(requestURL);
         const response = await fetch(requestURL);
         if (!response.ok) {
           throw new Error("server response was not OK");
@@ -40,7 +42,7 @@ export default function EmissionsPerTab({ url }) {
             {
               params: {
                 api_key:
-                  "UWEF3YQ3XZZ6PMZPT9EGW1Q7H13MIQK2CA2AURVMXNJBKSJRBI79L7KNWDY5OWAT51BCENIRFACLNJFV",
+                  "XUPSCH9Y3DF1QQ4NMQSL7A71AE98B9NI3F4EBJJO1FVOVGDON6N0OGNMEJ7P22NQTM7B3AFZHBEH0PGM",
                 url: url,
                 extract_rules:
                   '{"images":{"selector":"img","type":"list","output":{"src":"img@src","alt":"img@alt"}}}',
@@ -48,15 +50,20 @@ export default function EmissionsPerTab({ url }) {
             }
           );
 
+          //avg 92236.5 from sample pages
           // calc the bytes
-          const totalBytes = scrapingBeeResponse.data.images.reduce(
-            (total, image) => total + image.src.length,
+
+          const { images } = scrapingBeeResponse.data;
+          const totalBytes = images.reduce(
+            (total, image) => total + AVERAGE_IMAGE_BYTE_SIZE,
             0
           );
 
           const emissionsAPIResponse = await axios.get(
             `https://api.websitecarbon.com/data?bytes=${totalBytes}&green=0`
           );
+
+          console.log(url, totalBytes);
 
           setEmissionPerTab(emissionsAPIResponse.data);
         } catch (error) {
