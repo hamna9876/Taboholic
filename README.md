@@ -6,3 +6,4 @@ Currently undergoing development, implemented features:
 
     - A list of all tabs per window
     - Can manage opened tab: close, view
+    - Displays carbon emissions per tab
